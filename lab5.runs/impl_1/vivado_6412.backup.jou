@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Mar 21 22:09:50 2023
+# Process ID: 6412
+# Current directory: F:/Vivado labs/sys3_lab1_myversion/lab5.runs/impl_1
+# Command line: vivado.exe -log Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Top.tcl -notrace
+# Log file: F:/Vivado labs/sys3_lab1_myversion/lab5.runs/impl_1/Top.vdi
+# Journal file: F:/Vivado labs/sys3_lab1_myversion/lab5.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Top.tcl -notrace

@@ -1,0 +1,127 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Tue Mar 21 22:10:25 2023
+| Host         : LAPTOP-1KEUI2OI running 64-bit major release  (build 9200)
+| Command      : report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx
+| Design       : Top
+| Device       : xc7a100tcsg324-3
+| Speed File   : -3
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 8
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 7          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT io_manager_inst/BHT_reg_0_127_0_0_i_1 is driving clock pin of 128 cells. This could lead to large hold time violations. First few involved cells are:
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_768_895_0_0/DP.LOW (in chip_inst/cpu/branch_prediction_unit/BHT_reg_768_895_0_0 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_768_895_0_0/SP.HIGH (in chip_inst/cpu/branch_prediction_unit/BHT_reg_768_895_0_0 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_768_895_0_0/SP.LOW (in chip_inst/cpu/branch_prediction_unit/BHT_reg_768_895_0_0 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_0_127_0_0/DP.HIGH (in chip_inst/cpu/branch_prediction_unit/BHT_reg_0_127_0_0 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_0_127_0_0/SP.HIGH (in chip_inst/cpu/branch_prediction_unit/BHT_reg_0_127_0_0 macro) {RAMD64E}
+
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT io_manager_inst/BHT_reg_0_127_1_1_i_1 is driving clock pin of 128 cells. This could lead to large hold time violations. First few involved cells are:
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_3328_3455_1_1/DP.HIGH (in chip_inst/cpu/branch_prediction_unit/BHT_reg_3328_3455_1_1 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_3328_3455_1_1/DP.LOW (in chip_inst/cpu/branch_prediction_unit/BHT_reg_3328_3455_1_1 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_2432_2559_1_1/DP.LOW (in chip_inst/cpu/branch_prediction_unit/BHT_reg_2432_2559_1_1 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_2432_2559_1_1/DP.HIGH (in chip_inst/cpu/branch_prediction_unit/BHT_reg_2432_2559_1_1 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BHT_reg_2432_2559_1_1/SP.HIGH (in chip_inst/cpu/branch_prediction_unit/BHT_reg_2432_2559_1_1 macro) {RAMD64E}
+
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT io_manager_inst/BTB_reg_0_63_12_14_i_1 is driving clock pin of 256 cells. This could lead to large hold time violations. First few involved cells are:
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14/RAMB (in chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14/RAMA (in chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14/RAMC (in chip_inst/cpu/branch_prediction_unit/BTB_reg_512_575_12_14 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1920_1983_12_14/RAMC (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1920_1983_12_14 macro) {RAMD64E}
+
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT io_manager_inst/BTB_reg_0_63_21_23_i_1 is driving clock pin of 256 cells. This could lead to large hold time violations. First few involved cells are:
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23/RAMA (in chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23/RAMC (in chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23/RAMB (in chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_4032_4095_21_23 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_21_23/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_21_23 macro) {RAMD64E}
+
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT io_manager_inst/BTB_reg_0_63_3_5_i_1 is driving clock pin of 256 cells. This could lead to large hold time violations. First few involved cells are:
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5/RAMC (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5/RAMB (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5/RAMA (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_3_5 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_3_5/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_3_5 macro) {RAMD64E}
+
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT io_manager_inst/BTB_reg_0_63_6_8_i_1 is driving clock pin of 256 cells. This could lead to large hold time violations. First few involved cells are:
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8/RAMC (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8/RAMB (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8/RAMA (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_6_8 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1920_1983_6_8/RAMC (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1920_1983_6_8 macro) {RAMD64E}
+
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT io_manager_inst/BTB_reg_0_63_9_11_i_1 is driving clock pin of 256 cells. This could lead to large hold time violations. First few involved cells are:
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11/RAMB (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11/RAMA (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11/RAMC (in chip_inst/cpu/branch_prediction_unit/BTB_reg_3904_3967_9_11 macro) {RAMD64E}
+    chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_9_11/RAMD (in chip_inst/cpu/branch_prediction_unit/BTB_reg_1856_1919_9_11 macro) {RAMD64E}
+
+Related violations: <none>
+
+

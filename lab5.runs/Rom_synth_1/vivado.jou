@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Mar 16 20:07:06 2023
+# Process ID: 11236
+# Current directory: F:/Vivado labs/sys3_lab1_myversion/lab5.runs/Rom_synth_1
+# Command line: vivado.exe -log Rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rom.tcl
+# Log file: F:/Vivado labs/sys3_lab1_myversion/lab5.runs/Rom_synth_1/Rom.vds
+# Journal file: F:/Vivado labs/sys3_lab1_myversion/lab5.runs/Rom_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Rom.tcl -notrace

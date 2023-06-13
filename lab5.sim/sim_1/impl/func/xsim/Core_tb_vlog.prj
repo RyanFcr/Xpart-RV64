@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../code/src" --include "F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
+"Core_tb_func_impl.v" \
+"../../../../../lab5.srcs/sources_1/new/ALU.v" \
+"../../../../../code/src/Core.v" \
+"../../../../../lab5.srcs/sources_1/new/Register.v" \
+"../../../../../code/src/SCPU.v" \
+"../../../../../lab5.srcs/sources_1/new/datapath.v" \
+"../../../../../lab5.srcs/sources_1/new/mycontrol.v" \
+"../../../../../lab5.srcs/sources_1/new/pc.v" \
+
+sv xil_defaultlib  --include "../../../../../code/src" --include "F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../../code/test_bench/Core_tb.sv" \
+
+# Do not sort compile order
+nosort

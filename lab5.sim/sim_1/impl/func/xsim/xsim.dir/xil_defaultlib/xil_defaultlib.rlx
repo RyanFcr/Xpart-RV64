@@ -1,0 +1,14 @@
+0.6
+2018.1
+Apr  4 2018
+19:30:32
+F:/Vivado labs/lab5/code/src/AluOp.vh,1653013426,verilog,,,,,,,,,,,,
+F:/Vivado labs/lab5/code/src/Core.v,1654828803,verilog,,F:/Vivado labs/lab5/lab5.srcs/sources_1/new/Register.v,,Core,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/code/src/SCPU.v,1654828061,verilog,,F:/Vivado labs/lab5/lab5.srcs/sources_1/new/datapath.v,,SCPU,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/code/test_bench/Core_tb.sv,1654613080,systemVerilog,,,,Core_tb,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/lab5.sim/sim_1/impl/func/xsim/Core_tb_func_impl.v,1654833691,verilog,,F:/Vivado labs/lab5/lab5.srcs/sources_1/new/ALU.v,,IO_Manager;Ram;Ram_blk_mem_gen_generic_cstr;Ram_blk_mem_gen_prim_width;Ram_blk_mem_gen_prim_width__parameterized0;Ram_blk_mem_gen_prim_wrapper;Ram_blk_mem_gen_prim_wrapper__parameterized0;Ram_blk_mem_gen_top;Ram_blk_mem_gen_v8_4_1;Ram_blk_mem_gen_v8_4_1_synth;Rom;Rom__dist_mem_gen_v8_0_12;Rom__dist_mem_gen_v8_0_12_rom;Rom__dist_mem_gen_v8_0_12_synth;Top;button_debouncer;button_debouncer_0;glbl;segnum_manager,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/lab5.srcs/sources_1/new/ALU.v,1654364782,verilog,,F:/Vivado labs/lab5/code/src/Core.v,F:/Vivado labs/lab5/code/src/AluOp.vh,ALU,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/lab5.srcs/sources_1/new/Register.v,1654614051,verilog,,F:/Vivado labs/lab5/code/src/SCPU.v,,Regs,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/lab5.srcs/sources_1/new/datapath.v,1654614035,verilog,,F:/Vivado labs/lab5/lab5.srcs/sources_1/new/mycontrol.v,,Datapath,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/lab5.srcs/sources_1/new/mycontrol.v,1654832131,verilog,,F:/Vivado labs/lab5/lab5.srcs/sources_1/new/pc.v,F:/Vivado labs/lab5/code/src/AluOp.vh,mycontrol,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+F:/Vivado labs/lab5/lab5.srcs/sources_1/new/pc.v,1654605918,verilog,,,,pc,,xil_defaultlib,../../../../../code/src;F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,

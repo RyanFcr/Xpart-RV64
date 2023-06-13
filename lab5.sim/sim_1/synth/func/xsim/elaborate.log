@@ -1,0 +1,43 @@
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot Core_tb_func_synth xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 11 for port a [F:/Vivado labs/lab5/code/src/Core.v:67]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 11 for port addra [F:/Vivado labs/lab5/code/src/Core.v:75]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT4
+Compiling module xil_defaultlib.Rom__dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom__dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom__dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(IS_CLKARDCLK_INVERTED=1...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper__pa...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_func_synth
