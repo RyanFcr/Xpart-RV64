@@ -11,12 +11,12 @@ module Datapath(
     input [3:0] alu_op, 
     input [1:0] mem_to_reg, 
     input [31:0] inst, 
-    input [31:0] data_in, 
+    input [63:0] data_in, 
     input [4:0] debug_reg_addr, 
-    output [31:0] addr_out, 
-    output [31:0] data_out, 
-    output [31:0] pc_out,
-    output [31:0] debug_reg_addr_out 
+    output [63:0] addr_out, 
+    output [63:0] data_out, 
+    output [63:0] pc_out,
+    output [63:0] debug_reg_addr_out 
  );
  
     reg pc_change; 

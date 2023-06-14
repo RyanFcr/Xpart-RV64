@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1680703000fs"></ZoomStartTime>
-      <ZoomEndTime time="2073703001fs"></ZoomEndTime>
-      <Cursor1Time time="2482703000fs"></Cursor1Time>
+      <ZoomStartTime time="95358000000fs"></ZoomStartTime>
+      <ZoomEndTime time="95397700001fs"></ZoomEndTime>
+      <Cursor1Time time="99561672000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="140"></NameColumnWidth>
+      <NameColumnWidth column_width="136"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/Core_tb/pc_out" type="array">
       <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">pc_out[31:0]</obj_property>
@@ -27,6 +27,10 @@
    <wvobject fp_name="/Core_tb/uut/inst" type="array">
       <obj_property name="ElementShortName">inst[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/pc_out" type="array">
+      <obj_property name="ElementShortName">pc_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_out[63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/IF_ID_reg/inst_IF_ID" type="array">
       <obj_property name="ElementShortName">inst_IF_ID[31:0]</obj_property>
@@ -65,8 +69,8 @@
       <obj_property name="ObjectShortName">stored_address_ID_EX[11:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/stored_pc_IF_ID" type="array">
-      <obj_property name="ElementShortName">stored_pc_IF_ID[31:0]</obj_property>
-      <obj_property name="ObjectShortName">stored_pc_IF_ID[31:0]</obj_property>
+      <obj_property name="ElementShortName">stored_pc_IF_ID[63:0]</obj_property>
+      <obj_property name="ObjectShortName">stored_pc_IF_ID[63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/branch_prediction_unit/is_taken" type="logic">
       <obj_property name="ElementShortName">is_taken</obj_property>

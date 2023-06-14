@@ -3,17 +3,17 @@
 module IF_ID_reg(
     input clk, 
     input [31:0] inst, 
-    input [31:0] pc, 
+    input [63:0] pc, 
     input stall, 
     input csr_stall, 
     input flush, 
     input [11:0] stored_address_IF, 
-    input [31:0] stored_pc_IF, 
+    input [63:0] stored_pc_IF, 
     input is_taken_IF, 
     output reg[31:0] inst_IF_ID, 
-    output reg[31:0] pc_IF_ID, 
+    output reg[63:0] pc_IF_ID, 
     output reg[11:0] stored_address_IF_ID, 
-    output reg[31:0] stored_pc_IF_ID, 
+    output reg[63:0] stored_pc_IF_ID, 
     output reg is_taken_IF_ID 
 );
 

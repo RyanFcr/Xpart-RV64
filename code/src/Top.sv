@@ -3,10 +3,10 @@
 module Top(
     input          clk,
     input          resetn,
-    input  [15:0]  switch, 
+    input  [31:0]  switch, 
     input  [ 4:0]  button,  
     
-    output [15:0]  led,
+    output [31:0]  led,
     output [ 2:0]  rgb1,
     output [ 2:0]  rgb2,
     output [ 7:0]  num_csn,
@@ -15,21 +15,21 @@ module Top(
     logic aresetn;
     logic step;
 
-    logic [31:0] address;
-    logic [31:0] data_out;
-    logic [31:0] data_in;
+    logic [63:0] address;
+    logic [63:0] data_out;
+    logic [63:0] data_in;
 
-    logic [31:0] chip_debug_in;
-    logic [31:0] chip_debug_out0;
-    logic [31:0] chip_debug_out1;
-    logic [31:0] chip_debug_out2;
-    logic [31:0] chip_debug_out3;
+    logic [63:0] chip_debug_in;
+    logic [63:0] chip_debug_out0;
+    logic [63:0] chip_debug_out1;
+    logic [63:0] chip_debug_out2;
+    logic [63:0] chip_debug_out3;
 
     Core chip_inst(
         .clk(clk),
         .aresetn(aresetn),
         .step(step),
-        .debug_mode(switch[15]),
+        .debug_mode(switch[31]),
         .debug_reg_addr(switch[11:7]),
         .address(address),
         .data_out(data_out),
@@ -63,10 +63,10 @@ module Top(
         .rgb2(rgb2),
         
         // debug
-        .debug0(32'h88888888),
-        .debug1({16'b0, switch[15:0]}),
-        .debug2({12'b0, 3'b0, button[4], 3'b0, button[3], 3'b0, button[2], 3'b0, button[1], 3'b0, button[0]}),
-        .debug3(32'h12345678),
+        .debug0(64'h8888888888888888),
+        .debug1({32'b0, switch[31:0]}),
+        .debug2({20'b0, 3'b0, button[4], 3'b0, button[3], 3'b0, button[2], 3'b0, button[1], 3'b0, button[0]}),
+        .debug3(64'h1234567812345678),
         .debug4(chip_debug_out0),
         .debug5(chip_debug_out1),
         .debug6(chip_debug_out2),

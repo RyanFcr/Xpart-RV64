@@ -441,3 +441,20 @@ INFO: [Common 17-1381] The checkpoint 'F:/Vivado labs/sys3_lab1_myversion/lab5.r
 INFO: [runtcl-4] Executing : report_utilization -file Ram_utilization_synth.rpt -pb Ram_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 847.059 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Thu Mar 16 20:07:01 2023...
+
+*** Running vivado
+    with args -log Ram.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Ram.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Ram.tcl -notrace
+Command: synth_design -top Ram -part xc7a100tcsg324-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8292 

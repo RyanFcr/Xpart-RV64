@@ -1,0 +1,1698 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jun 13 16:27:47 2023
+# Process ID: 10764
+# Current directory: C:/Users/12991/Desktop/sys3_lab1_myversion - 副本
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10528 C:\Users\12991\Desktop\sys3_lab1_myversion - 副本\lab5.xpr
+# Log file: C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/vivado.log
+# Journal file: C:/Users/12991/Desktop/sys3_lab1_myversion - 副本\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.xpr}
+INFO: [Project 1-313] Project file moved from 'F:/Vivado labs/sys3_lab1_myversion' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/12991/Desktop/sys2_lab7/lab7/memory/myRom.v', nor could it be found using path 'F:/Vivado labs/sys2_lab7/lab7/memory/myRom.v'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/12991/Desktop/sys2_lab7/lab7/memory/myRam.v', nor could it be found using path 'F:/Vivado labs/sys2_lab7/lab7/memory/myRam.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 978.090 ; gain = 202.758
+update_compile_order -fileset sources_1
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:219]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:223]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 32 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:409]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:47]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:61]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.
+
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.516 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1048.543 ; gain = 33.027
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <SCPU_RV64> not found while processing module instance <cpu> [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:26]
+ERROR: [VRFC 10-2063] Module <Rom_RV64> not found while processing module instance <rom_unit> [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:47]
+ERROR: [VRFC 10-2063] Module <Ram_RV64> not found while processing module instance <ram_unit> [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:53]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <Rom_RV64> not found while processing module instance <rom_unit> [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:47]
+ERROR: [VRFC 10-2063] Module <Ram_RV64> not found while processing module instance <ram_unit> [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:53]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port curpc [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:39]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1085.109 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 1102.578 ; gain = 17.469
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port curpc [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:39]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1103.863 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1107.352 ; gain = 3.488
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port curpc [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:39]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1113.430 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1113.430 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1113.430 ; gain = 0.000
+set_property -dict [list CONFIG.depth {65536} CONFIG.memory_type {rom}] [get_ips Rom]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port curpc [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:39]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1125.086 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1128.207 ; gain = 3.121
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port curpc [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:39]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1128.953 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1128.953 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1128.957 ; gain = 0.004
+save_wave_config {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port curpc [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:39]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1130.352 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1133.156 ; gain = 2.805
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Ram/Ram.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}]
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_ip_user_files -of_objects [get_files {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'C:/Users/12991/Desktop/sys3_lab1_myversion'
+WARNING: [Vivado 12-818] No files matched '-'
+WARNING: [Vivado 12-818] No files matched '副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci'
+export_simulation -of_objects [get_files {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom.xci}}] -directory {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files} -ipstatic_source_dir {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/modelsim} {questa=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/questa} {riviera=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/riviera} {activehdl=C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1139.320 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {{C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/Core_tb_behav.wcfg}
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1143.094 ; gain = 3.773
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Ram.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/Rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-rom.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/lab2-ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ram
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1
+INFO: [VRFC 10-311] analyzing module Ram_blk_mem_gen_v8_4_1_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/ip/Rom_1/Rom_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_rom
+INFO: [VRFC 10-311] analyzing module Rom_dist_mem_gen_v8_0_12_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/EX_MEM_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/ID_EX_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/IF_ID_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/MEM_WB_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/branch_prediction_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_prediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/hazard_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/immgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/mycontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mycontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.srcs/sources_1/new/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/lab5.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port address [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:50]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_out [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:51]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port data_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:52]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_in [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:53]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out0 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out1 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out2 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port chip_debug_out3 [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/test_bench/Core_tb.sv:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:91]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:153]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port inst [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:176]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port pc_IF_ID [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:177]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:226]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port forwarding_reg_write_MEM_WB [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:230]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/SCPU.v:418]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port a [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:48]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:56]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port dina [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:57]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port douta [C:/Users/12991/Desktop/sys3_lab1_myversion - 副本/code/src/Core.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc
+Compiling module xil_defaultlib.branch_prediction
+Compiling module xil_defaultlib.IF_ID_reg
+Compiling module xil_defaultlib.hazard_detection_unit
+Compiling module xil_defaultlib.mycontrol
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.immgen
+Compiling module xil_defaultlib.ID_EX_reg
+Compiling module xil_defaultlib.forwarding_unit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM_reg
+Compiling module xil_defaultlib.MEM_WB_reg
+Compiling module xil_defaultlib.SCPU
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_rom
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12_synth
+Compiling module xil_defaultlib.Rom_dist_mem_gen_v8_0_12
+Compiling module xil_defaultlib.Rom
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000001...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100010010...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_wrapper_ini...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_prim_width__para...
+Compiling module xil_defaultlib.Ram_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.Ram_blk_mem_gen_top
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1_synth
+Compiling module xil_defaultlib.Ram_blk_mem_gen_v8_4_1
+Compiling module xil_defaultlib.Ram
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1146.762 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1146.762 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1146.762 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 14 19:24:08 2023...

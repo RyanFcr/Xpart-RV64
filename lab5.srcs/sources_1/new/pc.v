@@ -7,9 +7,9 @@ module pc(
     input pc_change,
     input csr_stall,  
     input is_taken, 
-    input [31:0] target_address, 
-    input [31:0] adderoutput, 
-    output reg[31:0] curpc 
+    input [63:0] target_address, 
+    input [63:0] adderoutput, 
+    output reg[63:0] curpc 
     );
     
     always @(posedge clk or posedge rst) begin 
