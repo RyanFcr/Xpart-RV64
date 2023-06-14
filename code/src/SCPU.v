@@ -99,10 +99,10 @@ module SCPU(
         .pc_src(pc_src_IF_ID),         // 2'b00 表示pc的数据来自pc+4, 2'b01 表示数据来自JALR跳转地址, 2'b10表示数据来自JAL跳转地址(包括branch). branch 跳转根据条件决定
         .reg_write(reg_write_IF_ID),   // 1'b1 表示写寄存器
         .alu_src_b(alu_src_b_IF_ID),   // 1'b1 表示ALU B口的数据源来自imm, 1'b0表示数据来自Reg[rs2]
-        .alu_op(alu_op_IF_ID),         // 用来控制ALU操作，具体请看AluOp.vh中对各个操作的编�??
+        .alu_op(alu_op_IF_ID),         // 用来控制ALU操作，具体请看AluOp.vh中对各个操作的编�??
         .mem_to_reg(mem_to_reg_IF_ID), // 2'b00 表示写回rd的数据来自ALU, 2'b01表示数据来自imm, 2'b10表示数据来自pc+4, 2'b11 表示数据来自data memory
         .mem_write(mem_write_IF_ID),   // 1'b1 表示写data memory, 1'b0表示读data memory
-        .branch(branch_IF_ID),         // 1'b1 表示是branch类型的指�??
+        .branch(branch_IF_ID),         // 1'b1 表示是branch类型的指�??
         .b_type(b_type_IF_ID),          // 与funct3相同
         .mem_read(mem_read_IF_ID), 
         .csr_write(csr_write_IF_ID), 
@@ -110,7 +110,7 @@ module SCPU(
     );
     assign ecall_IF_ID = (inst_IF_ID == 32'h00000073); 
     assign mret_IF_ID = (inst_IF_ID == 32'h30200073);
-
+    assign sfence_vma_IF_ID = (inst_IF_ID[31:25] == 7'b0001001&&inst_IF_ID[14:0] == 15'b000000001110011);
     always @(*) begin
         csr_addr_read = inst_IF_ID[31:20]; 
         if (ecall_IF_ID == 1 || illegal_IF_ID == 1) csr_addr_read = 12'h305; 

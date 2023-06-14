@@ -12,31 +12,31 @@ module CSR(
     output reg [31:0] csr_out 
 );
 
-    reg [31:0] mtvec, mepc, mstatus, mcause; 
+    reg [31:0] stvec, sepc, sstatus, scause; 
     
     always @(*) begin
-        if (csr_reg == 12'h300) csr_out = mstatus; 
-        else if (csr_reg == 12'h305) csr_out = mtvec; 
-        else if (csr_reg == 12'h341) csr_out = mepc; 
-        else if (csr_reg == 12'h342) csr_out = mcause; 
+        if (csr_reg == 12'h100) csr_out = sstatus; 
+        else if (csr_reg == 12'h105) csr_out = stvec; 
+        else if (csr_reg == 12'h141) csr_out = sepc; 
+        else if (csr_reg == 12'h142) csr_out = scause; 
     end
     
     always @(negedge clk or posedge rst) begin
         if (rst == 1) begin
-            mtvec = 0; 
-            mepc = 0; 
-            mstatus = 0; 
-            mcause = 0; 
+            stvec = 0; 
+            sepc = 0; 
+            sstatus = 0; 
+            scause = 0; 
         end 
         else begin 
             if (we == 1) begin
-                if (write_addr == 12'h300) mstatus = write_data; 
-                else if (write_addr == 12'h305) mtvec = write_data; 
-                else if (write_addr == 12'h341) mepc = write_data; 
-                else if (csr_reg == 12'h342) mcause = write_data; 
+                if (write_addr == 12'h100) sstatus = write_data; 
+                else if (write_addr == 12'h105) stvec = write_data; 
+                else if (write_addr == 12'h141) sepc = write_data; 
+                else if (csr_reg == 12'h142) scause = write_data; 
             end 
-            if (ecall == 1) mcause = 32'd11; 
-            else if (illegal == 1) mcause = 32'd2; 
+            if (ecall == 1) scause = 32'd11; 
+            else if (illegal == 1) scause = 32'd2; 
         end
     end 
 
