@@ -4,18 +4,22 @@ module SCPU(
     input         clk,
     input         rst,
     input  [31:0] inst,
-    input  [31:0] data_in,  // data from data memory
+    input  [63:0] data_in,  // data from data memory
     input  [4:0]  debug_reg_addr, 
-    output [31:0] addr_out, // data memory address
-    output [31:0] data_out, // data to data memory
-    output [31:0] pc_out,   // connect to instruction memory
+    output [63:0] addr_out, // data memory address
+    output [63:0] data_out, // data to data memory
+    output [63:0] pc_out,   // connect to instruction memory
     output        mem_write, 
-    output [31:0] debug_reg_addr_out 
+    output [63:0]  debug_reg_addr_out, 
+    output [1:0] memoryAccessByte 
     );
-
+    
+    // 实现 CPU 功能
     wire pc_change, stall, flush, csr_stall, hazard_stall, branch_prediction_we, is_taken_IF; 
-    wire [31:0] adderoutput, stored_pc_IF, target_address;
-    reg [31:0] csr_data_WB, branch_pc;
+    wire [63:0] adderoutput,target_address;
+    wire [63:0]  stored_pc_IF; 
+    reg [63:0] csr_data_WB;
+    reg [63:0]  branch_pc;
     reg [11:0] csr_addr_WB, csr_addr_read;
     wire [11:0] stored_address_IF, branch_address; 
     reg for_csr_write, real_taken; 
@@ -54,11 +58,13 @@ module SCPU(
     wire [3:0] alu_op_IF_ID;
     wire [1:0] pc_src_IF_ID, mem_to_reg_IF_ID;
     wire alu_src_IF_ID, branch_IF_ID, alu_src_b_IF_ID, reg_write_IF_ID, mem_write_IF_ID, mem_read_IF_ID, hazard_mem_read_ID_EX, csr_write_IF_ID, ecall_IF_ID, mret_IF_ID, illegal_IF_ID, is_taken_IF_ID;
-    wire [31:0] inst_IF_ID, pc_IF_ID, rs1_out, rs2_out, imm_IF_ID, csr_out_IF_ID, stored_pc_IF_ID;
-    reg [31:0] mem_to_reg_data; 
+    wire [63:0] rs1_out, rs2_out, imm_IF_ID, csr_out_IF_ID;
+    wire [63:0] inst_IF_ID, pc_IF_ID, stored_pc_IF_ID;
+    reg  [63:0] mem_to_reg_data; 
     wire [4:0] hazard_rd_ID_EX; 
     wire [2:0] b_type_IF_ID; 
     wire [11:0] stored_address_IF_ID; 
+    wire [1:0] memoryAccessByte_IF_ID;  
 
     IF_ID_reg IF_ID_reg (
         .clk(clk), 
@@ -106,7 +112,8 @@ module SCPU(
         .b_type(b_type_IF_ID),          // 涓巉unct3鐩稿悓
         .mem_read(mem_read_IF_ID), 
         .csr_write(csr_write_IF_ID), 
-        .illegal(illegal_IF_ID) 
+        .illegal(illegal_IF_ID), 
+        .memoryAccessByte(memoryAccessByte_IF_ID) 
     );
     assign ecall_IF_ID = (inst_IF_ID == 32'h00000073); 
     assign mret_IF_ID = (inst_IF_ID == 32'h30200073);
@@ -150,14 +157,15 @@ module SCPU(
     
 //--------------------------------------------- ID_EX stage
 
-    wire [31:0] data1, data2, inst_ID_EX, pc_ID_EX, imm_ID_EX, res_ID_EX, forwarding_res_EX_MEM, csr_out_ID_EX, stored_pc_ID_EX;
-    wire [1:0] pc_src_ID_EX, mem_to_reg_ID_EX, forwarding_reg_write_EX_MEM, forwarding_reg_write_MEM_WB, forwarding_a, forwarding_b; 
+    wire [63:0] data1, data2, pc_ID_EX, imm_ID_EX, res_ID_EX, forwarding_res_EX_MEM, csr_out_ID_EX,stored_pc_ID_EX;
+    wire[31:0]  inst_ID_EX;
+    wire [1:0] pc_src_ID_EX, mem_to_reg_ID_EX, forwarding_reg_write_EX_MEM, forwarding_reg_write_MEM_WB, forwarding_a, forwarding_b, memoryAccessByte_ID_EX; 
     wire reg_write_ID_EX, alu_src_b_ID_EX, mem_write_ID_EX, branch_ID_EX, zero_ID_EX, smaller_ID_EX, bigger_ID_EX, mem_read_ID_EX, csr_write_ID_EX, ecall_ID_EX, mret_ID_EX, illegal_ID_EX, is_taken_ID_EX; 
     wire [3:0] alu_op_ID_EX; 
     wire [4:0] forwarding_rd_EX_MEM, forwarding_rd_MEM_WB; 
     wire [2:0] b_type_ID_EX; 
     reg pc_change_ID_EX; 
-    reg [31:0] adderoutput_ID_EX, alu_in_a, alu_in_b, real_data2, real_res;
+    reg [63:0] adderoutput_ID_EX, alu_in_a, alu_in_b, real_data2, real_res;
     wire [11:0] stored_address_ID_EX; 
 
     ID_EX_reg ID_EX_reg(
@@ -185,7 +193,8 @@ module SCPU(
         .illegal_IF_ID(illegal_IF_ID), 
         .stored_address_IF_ID(stored_address_IF_ID), 
         .is_taken_IF_ID(is_taken_IF_ID), 
-        .stored_pc_IF_ID(stored_pc_IF_ID), 
+        .stored_pc_IF_ID(stored_pc_IF_ID),
+        .memoryAccessByte_IF_ID(memoryAccessByte_IF_ID),  
         .data1(data1), 
         .data2(data2), 
         .inst_ID_EX(inst_ID_EX), 
@@ -207,7 +216,8 @@ module SCPU(
         .illegal_ID_EX(illegal_ID_EX), 
         .stored_address_ID_EX(stored_address_ID_EX), 
         .is_taken_ID_EX(is_taken_ID_EX), 
-        .stored_pc_ID_EX(stored_pc_ID_EX) 
+        .stored_pc_ID_EX(stored_pc_ID_EX), 
+        .memoryAccessByte_ID_EX(memoryAccessByte_ID_EX) 
     );
     
     assign hazard_mem_read_ID_EX = mem_read_ID_EX;
@@ -351,9 +361,10 @@ module SCPU(
 
 //--------------------------------------------- EX/MEM
 
-    wire [31:0] res_EX_MEM, pc_EX_MEM, adderoutput_EX_MEM, inst_EX_MEM, data_EX_MEM, imm_EX_MEM, csr_out_EX_MEM;
+    wire [63:0] res_EX_MEM, adderoutput_EX_MEM, data_EX_MEM, imm_EX_MEM, csr_out_EX_MEM,pc_EX_MEM;
+    wire [31:0] inst_EX_MEM;
     wire reg_write_EX_MEM, alu_src_b_EX_MEM, mem_write_EX_MEM, branch_EX_MEM, b_type_EX_MEM, csr_write_EX_MEM, ecall_EX_MEM, illegal_EX_MEM; 
-    wire [1:0] pc_src_EX_MEM, mem_to_reg_EX_MEM; 
+    wire [1:0] pc_src_EX_MEM, mem_to_reg_EX_MEM, memoryAccessByte_EX_MEM; 
     wire [3:0] alu_op_EX_MEM; 
 
     EX_MEM_reg EX_MEM_reg(
@@ -371,6 +382,7 @@ module SCPU(
         .csr_write_ID_EX(csr_write_ID_EX), 
         .ecall_ID_EX(ecall_ID_EX), 
         .illegal_ID_EX(illegal_ID_EX), 
+        .memoryAccessByte_ID_EX(memoryAccessByte_ID_EX), 
         .res_EX_MEM(res_EX_MEM), 
         .pc_EX_MEM(pc_EX_MEM), 
         .inst_EX_MEM(inst_EX_MEM), 
@@ -383,10 +395,12 @@ module SCPU(
         .csr_out_EX_MEM(csr_out_EX_MEM), 
         .csr_write_EX_MEM(csr_write_EX_MEM), 
         .ecall_EX_MEM(ecall_EX_MEM), 
-        .illegal_EX_MEM(illegal_EX_MEM) 
+        .illegal_EX_MEM(illegal_EX_MEM), 
+        .memoryAccessByte_EX_MEM(memoryAccessByte_EX_MEM) 
     );
     
     assign addr_out = res_EX_MEM; 
+    assign memoryAccessByte = memoryAccessByte_EX_MEM; 
     assign data_out = data_EX_MEM; 
     assign mem_write = mem_write_EX_MEM; 
     assign forwarding_reg_write_EX_MEM = reg_write_EX_MEM; 
@@ -395,7 +409,8 @@ module SCPU(
 
 //--------------------------------------------- MEM/WB
 
-    wire [31:0] res_MEM_WB, data_in_MEM_WB, pc_src_MEM_WB, inst_MEM_WB, imm_MEM_WB, pc_MEM_WB, csr_out_MEM_WB; 
+    wire [63:0] res_MEM_WB, data_in_MEM_WB, imm_MEM_WB, csr_out_MEM_WB,pc_src_MEM_WB, pc_MEM_WB;
+    wire [31:0] inst_MEM_WB;
     wire [1:0] mem_to_reg_MEM_WB;
     wire csr_write_MEM_WB, reg_write_MEM_WB, ecall_MEM_WB, illegal_MEM_WB; 
 

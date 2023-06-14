@@ -8,11 +8,11 @@ module CSR(
     input we,
     input [11:0] csr_reg, 
     input [11:0] write_addr, 
-    input [31:0] write_data,
-    output reg [31:0] csr_out 
+    input [63:0] write_data,
+    output reg [63:0] csr_out 
 );
 
-    reg [31:0] mtvec, mepc, mstatus, mcause; 
+    reg [63:0] mtvec, mepc, mstatus, mcause; 
     
     always @(*) begin
         if (csr_reg == 12'h300) csr_out = mstatus; 
@@ -35,8 +35,8 @@ module CSR(
                 else if (write_addr == 12'h341) mepc = write_data; 
                 else if (csr_reg == 12'h342) mcause = write_data; 
             end 
-            if (ecall == 1) mcause = 32'd11; 
-            else if (illegal == 1) mcause = 32'd2; 
+            if (ecall == 1) mcause = 64'd11; 
+            else if (illegal == 1) mcause = 64'd2; 
         end
     end 
 

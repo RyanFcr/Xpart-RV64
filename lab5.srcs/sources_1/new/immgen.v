@@ -2,12 +2,12 @@
 
 module immgen(
     input [31:0] inst, 
-    output [31:0] imm
+    output [63:0] imm
 );
     
-    wire R_type, I_type, S_type, B_type, J_type, U_type, CSR_type; 
+    wire R_type, I_type, S_type, B_type, J_type, U_type, CSR_type, ADDW_type, SLLIW_type; 
     assign R_type = (inst[6:0] == 7'b0110011);
-    assign I_type = (inst[6:0] == 7'b0010011) || (inst[6:0] == 7'b0000011) || (inst[6:0] == 7'b1100111);
+    assign I_type = (inst[6:0] == 7'b0010011) || (inst[6:0] == 7'b0000011) || (inst[6:0] == 7'b1100111) || (inst[6:0] == 7'b0011011 && inst[14:12] == 3'b000) || (inst[6:0] == 7'b0011011 && inst[14:12] == 3'b001);
     assign S_type = (inst[6:0] == 7'b0100011);
     assign B_type = (inst[6:0] == 7'b1100011);
     assign J_type = (inst[6:0] == 7'b1101111); 

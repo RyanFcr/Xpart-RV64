@@ -1,25 +1,27 @@
 `timescale 1ns / 1ps
 
 module Core(
-    input  wire        clk,
-    input  wire        aresetn,
-    input  wire        step,
-    input  wire        debug_mode,
-    input  wire [4:0]  debug_reg_addr, // register address
+    input  wire            clk,
+    input  wire            aresetn,
+    input  wire            step,
+    input  wire            debug_mode,
+    input  wire  [4:0]     debug_reg_addr, // register address
 
-    output wire [31:0] address,
-    output wire [31:0] data_out,
-    input  wire [31:0] data_in,
+    output wire [63:0]     address,
+    output wire [63:0]     data_out,
+    input  wire [63:0]     data_in,
     
-    input  wire [31:0] chip_debug_in,
-    output wire [31:0] chip_debug_out0,
-    output wire [31:0] chip_debug_out1,
-    output wire [31:0] chip_debug_out2,
-    output wire [31:0] chip_debug_out3 
+    input  wire [63:0]     chip_debug_in,
+    output wire [63:0]     chip_debug_out0,
+    output wire [63:0]     chip_debug_out1,
+    output wire [63:0]     chip_debug_out2,
+    output wire [63:0]     chip_debug_out3 
 );
     wire rst, mem_write, mem_clk, cpu_clk;
-    wire [31:0] inst, core_data_in, addr_out, core_data_out, pc_out, debug_reg_addr_out;
-    reg  [31:0] clk_div;
+    wire [31:0] inst;
+    wire [63:0] pc_out,core_data_in, addr_out, core_data_out,debug_reg_addr_out;
+    reg  [63:0] clk_div;
+    wire [1:0] memoryAccessByte; 
     
     assign rst = ~aresetn;
     SCPU cpu(
@@ -32,7 +34,8 @@ module Core(
         .data_out(core_data_out),    // data to data memory
         .pc_out(pc_out),             // connect to instruction memory
         .mem_write(mem_write), 
-        .debug_reg_addr_out(debug_reg_addr_out) 
+        .debug_reg_addr_out(debug_reg_addr_out), 
+        .memoryAccessByte(memoryAccessByte) 
     );
     
     always @(posedge clk) begin
@@ -42,37 +45,23 @@ module Core(
     assign mem_clk = ~clk_div[0]; // 50mhz
     assign cpu_clk = debug_mode ? clk_div[0] : step;
     
-    // TODO: 杩炴帴Instruction Memory
+    // TODO: 链接 Instruction Memory
     Rom rom_unit (
-        .a(pc_out >> 2),  // 鍦板潃杈撳叆
-        .spo(inst) // 璇绘暟鎹緭鍑?
+        .a(pc_out >> 2),  // 地址输入
+        .spo(inst) // 数据输出
     );
-    /*
-    myRom rom_unit(
-        .address(pc_out[12:2]),
-        .out(inst)
-    );
-    */
         
-    // TODO: 杩炴帴Data Memory
-    Ram ram_unit (
-        .clka(mem_clk),  // 鏃堕挓
-        .wea(mem_write),   // 鏄惁鍐欐暟鎹?
-        .addra(addr_out), // 鍦板潃杈撳叆 
-        .dina(core_data_out),  // 鍐欐暟鎹緭鍏?
-        .douta(core_data_in)  // 璇绘暟鎹緭鍑?
+    // TODO: 链接 Data Memory
+    designed_ram my_ram_unit (
+        .clka(mem_clk),  // 时钟
+        .wea(mem_write),   // 是否写入数据
+        .addra(addr_out), // 地址输入 
+        .dina(core_data_out),  // 数据输入
+        .douta(core_data_in),  // 数据输出
+        .memoryAccessByte(memoryAccessByte) // byte length 
     );
-    /*
-    myRam ram_unit (
-        .clk(mem_clk), 
-        .we(mem_write), 
-        .write_data(core_data_out), 
-        .address(addr_out[12:0]), 
-        .read_data(core_data_in) 
-    );
-    */
     
-    // TODO: 娣诲姞32涓瘎瀛樺櫒缁勭殑杈撳嚭    
+    // TODO: 添加 64 位调试寄存器的输出    
     assign chip_debug_out0 = pc_out;
     assign chip_debug_out1 = addr_out;
     assign chip_debug_out2 = debug_reg_addr_out;

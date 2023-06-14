@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Ram_synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1678968226">
+<GenRun Id="Ram_synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1686753990">
   <File Type="PA-TCL" Name="Ram.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Ram_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Ram_reports.tcl"/>
   <File Type="RDS-RDS" Name="Ram.vds"/>
   <File Type="RDS-UTIL" Name="Ram_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Ram_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Ram.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Ram_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Ram_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Ram">
     <File Path="$PSRCDIR/sources_1/ip/Ram/Ram.xci">
       <FileInfo>
@@ -33,7 +36,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

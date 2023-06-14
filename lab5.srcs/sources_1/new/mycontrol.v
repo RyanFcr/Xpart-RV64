@@ -19,7 +19,8 @@ module mycontrol(
     output reg[2:0] b_type, 
     output reg mem_read, 
     output reg csr_write, 
-    output reg illegal 
+    output reg illegal, 
+    output reg [1:0] memoryAccessByte 
 );
     `include "AluOp.vh"
 
@@ -34,7 +35,21 @@ module mycontrol(
         end 
         else begin
         
-            if (op_code == 7'b0000011) mem_read = 1; else mem_read = 0; 
+            if (op_code == 7'b0000011) begin
+                mem_read = 1;  
+                memoryAccessByte = 2'b10; // 8 byte by default
+                if (funct3 == 3'b100) memoryAccessByte = 2'b00; // 1 byte
+                else if (funct3 == 3'b010) memoryAccessByte = 2'b01; // 4 byte 
+                else if (funct3 == 3'b011) memoryAccessByte = 2'b10; // 8 byte 
+            end 
+            else mem_read = 0; 
+            
+            if (op_code == 7'b0100011) begin
+                if (funct3 == 3'b000) memoryAccessByte = 2'b00; // 1 byte 
+                else if (funct3 == 3'b010) memoryAccessByte = 2'b01; // 4 byte 
+                else if (funct3 == 3'b011) memoryAccessByte = 2'b11; // 8 byte 
+            end
+             
             
             if (op_code == 7'b1100111) pc_src = 2'b01; 
             else if (op_code == 7'b1101111 || op_code == 7'b1100011) pc_src = 2'b10;
@@ -76,6 +91,7 @@ module mycontrol(
                 else if (funct3 == 3'b110) alu_op = OR;
                 else if (funct3 == 3'b111) alu_op = AND;
              end
+             else if (op_code == 7'b0011011 || op_code == 7'b0111011) alu_op = ADDW;  
              else alu_op = ADD;
              
              if (op_code == 7'b0110011 || op_code == 7'b0010011 || op_code == 7'b0010111 || op_code == 7'b0100011) mem_to_reg = 2'b00; 
@@ -102,11 +118,11 @@ module mycontrol(
                 illegal = 0; 
             end 
             else if (op_code == 7'b0000011) begin
-                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010 || funct3 == 3'b100 || funct3 == 3'b101) illegal = 0; 
+                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010  || funct3 == 3'b011 || funct3 == 3'b100 || funct3 == 3'b101) illegal = 0; 
                 else illegal = 1; 
             end
             else if (op_code == 7'b0100011) begin 
-                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010) illegal = 0; 
+                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010 || funct3 == 3'b011) illegal = 0; 
                 else illegal = 1; 
             end 
             else if (op_code == 7'b1100011) begin 

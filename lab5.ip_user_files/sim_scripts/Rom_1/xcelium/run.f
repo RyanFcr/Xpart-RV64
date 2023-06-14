@@ -15,6 +15,12 @@
 -makelib xcelium_lib/xpm \
   "F:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
+-makelib xcelium_lib/dist_mem_gen_v8_0_12 \
+  "../../../ipstatic/simulation/dist_mem_gen_v8_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../lab5.srcs/sources_1/ip/Rom_1/sim/Rom.v" \
+-endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v
 -endlib

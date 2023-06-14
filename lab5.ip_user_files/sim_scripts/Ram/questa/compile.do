@@ -4,10 +4,12 @@ vlib questa_lib/msim
 vlib questa_lib/msim/xilinx_vip
 vlib questa_lib/msim/xil_defaultlib
 vlib questa_lib/msim/xpm
+vlib questa_lib/msim/blk_mem_gen_v8_4_1
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 vmap xpm questa_lib/msim/xpm
+vmap blk_mem_gen_v8_4_1 questa_lib/msim/blk_mem_gen_v8_4_1
 
 vlog -work xilinx_vip -64 -sv -L xil_defaultlib "+incdir+F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
 "F:/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -25,6 +27,12 @@ vlog -work xil_defaultlib -64 -sv -L xil_defaultlib "+incdir+F:/Xilinx/Vivado/20
 
 vcom -work xpm -64 -93 \
 "F:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vlog -work blk_mem_gen_v8_4_1 -64 "+incdir+F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work xil_defaultlib -64 "+incdir+F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+F:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../lab5.srcs/sources_1/ip/Ram/sim/Ram.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

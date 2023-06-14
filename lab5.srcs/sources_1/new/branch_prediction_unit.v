@@ -6,15 +6,15 @@ module branch_prediction(
     input we, 
     input real_taken, //是否真的taken
     input [11:0] branch_address, //修改用的address
-    input [31:0] branch_pc, //target的pc
-    input [31:0] pc_out, 
+    input [63:0] branch_pc, //target的pc
+    input [63:0] pc_out, 
     output reg [11:0] stored_address, 
-    output reg [31:0] stored_pc, 
-    output reg [31:0] target_address, 
+    output reg [63:0] stored_pc, 
+    output reg [63:0] target_address, 
     output reg is_taken //是否预测taken
 );
     
-    reg [31:0] BTB[0:4095];
+    reg [63:0] BTB[0:4095];
     reg [1:0] BHT[0:4095]; 
     integer i;
     

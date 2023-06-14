@@ -9,5 +9,6 @@ parameter   ADD  = 4'b0000,
 			SRL  = 4'b0101,
 			SRA  = 4'b1101,
 			OR   = 4'b0110,
-			AND  = 4'b0111;
+			AND  = 4'b0111, 
+			ADDW = 4'b1001;
 //`endif
