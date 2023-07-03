@@ -58,9 +58,10 @@ module mycontrol(
             
             if (op_code == 7'b0110011 || op_code == 7'b0010011 || op_code == 7'b0000011 || op_code == 7'b1101111 || op_code == 7'b1100111 || op_code == 7'b0110111 || op_code == 7'b0010111) reg_write = 1; 
             else if (op_code == 7'b1110011 && (funct3 == 3'b001 || funct3 == 3'b010 || funct3 == 3'b011 || funct3 == 3'b101 || funct3 == 3'b110 || funct3 == 3'b111)) reg_write = 1; 
+            else if (op_code == 7'b0011011 || op_code == 7'b0111011) reg_write = 1; 
             else reg_write = 0; 
             
-            if (op_code == 7'b0010011 || op_code == 7'b0000011 || op_code == 7'b0100011 || op_code == 7'b0010111) alu_src_b = 1;
+            if (op_code == 7'b0010011 || op_code == 7'b0000011 || op_code == 7'b0100011 || op_code == 7'b0010111 || op_code == 7'b0011011) alu_src_b = 1;
             else alu_src_b = 0;
             
             if (op_code == 7'b0110011) begin 
@@ -95,7 +96,7 @@ module mycontrol(
              else if (op_code == 7'b0011011 || op_code == 7'b0111011) alu_op = ADDW;  
              else alu_op = ADD;
              
-             if (op_code == 7'b0110011 || op_code == 7'b0010011 || op_code == 7'b0010111 || op_code == 7'b0100011) mem_to_reg = 2'b00; 
+             if (op_code == 7'b0110011 || op_code == 7'b0010011 || op_code == 7'b0010111 || op_code == 7'b0100011 || op_code == 7'b0011011 || op_code == 7'b0111011) mem_to_reg = 2'b00; 
              else if (op_code == 7'b0110111) mem_to_reg = 2'b01;
              else if (op_code == 7'b1101111 || op_code == 7'b1100111) mem_to_reg = 2'b10; 
              else if (op_code == 7'b0000011) mem_to_reg = 2'b11;
@@ -144,6 +145,7 @@ module mycontrol(
                     else illegal = 1; 
                 end 
             end 
+            else if (op_code == 7'b0011011 || op_code == 7'b0111011) illegal = 0; 
             else illegal = 1; 
         end 
     end

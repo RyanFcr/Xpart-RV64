@@ -59,7 +59,7 @@ module SCPU(
     wire [1:0] pc_src_IF_ID, mem_to_reg_IF_ID;
     wire alu_src_IF_ID, branch_IF_ID, alu_src_b_IF_ID, reg_write_IF_ID, mem_write_IF_ID, mem_read_IF_ID, hazard_mem_read_ID_EX, csr_write_IF_ID, ecall_IF_ID, mret_IF_ID, illegal_IF_ID, is_taken_IF_ID;
     wire [63:0] rs1_out, rs2_out, imm_IF_ID, csr_out_IF_ID;
-    wire [63:0] inst_IF_ID, pc_IF_ID, stored_pc_IF_ID;
+    wire [31:0] inst_IF_ID, pc_IF_ID, stored_pc_IF_ID;
     reg  [63:0] mem_to_reg_data; 
     wire [4:0] hazard_rd_ID_EX; 
     wire [2:0] b_type_IF_ID; 

@@ -11,22 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1500000fs"></ZoomStartTime>
-      <ZoomEndTime time="9544134fs"></ZoomEndTime>
-      <Cursor1Time time="773577000fs"></Cursor1Time>
+      <ZoomStartTime time="150000000fs"></ZoomStartTime>
+      <ZoomEndTime time="364330294fs"></ZoomEndTime>
+      <Cursor1Time time="420000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="108"></NameColumnWidth>
-      <ValueColumnWidth column_width="137"></ValueColumnWidth>
+      <NameColumnWidth column_width="140"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/Core_tb/pc_out" type="array">
       <obj_property name="ElementShortName">pc_out[63:0]</obj_property>
       <obj_property name="ObjectShortName">pc_out[63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/inst" type="array">
-      <obj_property name="ElementShortName">inst[63:0]</obj_property>
-      <obj_property name="ObjectShortName">inst[63:0]</obj_property>
+      <obj_property name="ElementShortName">inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/pc_out" type="array">
       <obj_property name="ElementShortName">pc_out[63:0]</obj_property>
@@ -47,6 +47,34 @@
    <wvobject fp_name="/Core_tb/uut/cpu/MEM_WB_reg/inst_MEM_WB" type="array">
       <obj_property name="ElementShortName">inst_MEM_WB[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst_MEM_WB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/alu_unit/a" type="array">
+      <obj_property name="ElementShortName">a[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/alu_unit/b" type="array">
+      <obj_property name="ElementShortName">b[63:0]</obj_property>
+      <obj_property name="ObjectShortName">b[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/alu_unit/res" type="array">
+      <obj_property name="ElementShortName">res[63:0]</obj_property>
+      <obj_property name="ObjectShortName">res[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/imm_ID_EX" type="array">
+      <obj_property name="ElementShortName">imm_ID_EX[63:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_ID_EX[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/alu_src_b_ID_EX" type="logic">
+      <obj_property name="ElementShortName">alu_src_b_ID_EX</obj_property>
+      <obj_property name="ObjectShortName">alu_src_b_ID_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/imm_IF_ID" type="array">
+      <obj_property name="ElementShortName">imm_IF_ID[63:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_IF_ID[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/cpu/alu_unit/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/reg32/register" type="array">
       <obj_property name="ElementShortName">register[1:31][63:0]</obj_property>
