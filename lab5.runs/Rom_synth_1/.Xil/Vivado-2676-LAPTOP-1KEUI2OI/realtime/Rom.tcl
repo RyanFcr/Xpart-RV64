@@ -16,7 +16,7 @@ set rt::rc [catch {
     set rt::cmdEcho 0
     rt::set_parameter writeXmsg true
     rt::set_parameter enableParallelHelperSpawn true
-    set ::env(RT_TMP) "F:/Vivado labs/Xpart-RV64/lab5.runs/Rom_synth_1/.Xil/Vivado-9404-LAPTOP-1KEUI2OI/realtime/tmp"
+    set ::env(RT_TMP) "F:/Vivado labs/Xpart-RV64/lab5.runs/Rom_synth_1/.Xil/Vivado-2676-LAPTOP-1KEUI2OI/realtime/tmp"
     if { [ info exists ::env(RT_TMP) ] } {
       file delete -force $::env(RT_TMP)
       file mkdir $::env(RT_TMP)
@@ -52,7 +52,7 @@ set rt::rc [catch {
     rt::set_parameter rstSrlDepthThreshold 4
 # MODE: 
     rt::set_parameter webTalkPath {}
-    rt::set_parameter enableSplitFlowPath "F:/Vivado labs/Xpart-RV64/lab5.runs/Rom_synth_1/.Xil/Vivado-9404-LAPTOP-1KEUI2OI/"
+    rt::set_parameter enableSplitFlowPath "F:/Vivado labs/Xpart-RV64/lab5.runs/Rom_synth_1/.Xil/Vivado-2676-LAPTOP-1KEUI2OI/"
     set ok_to_delete_rt_tmp true 
     if { [rt::get_parameter parallelDebug] } { 
        set ok_to_delete_rt_tmp false 

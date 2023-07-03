@@ -45,6 +45,16 @@ module designed_ram(
                 wea8 = 1'b1; 
             end
         end
+        else begin
+            wea1 = 1'b0; 
+            wea2 = 1'b0; 
+            wea3 = 1'b0; 
+            wea4 = 1'b0; 
+            wea5 = 1'b0;
+            wea6 = 1'b0; 
+            wea7 = 1'b0; 
+            wea8 = 1'b0; 
+        end 
     end
     
     Ram ram_unit1 (

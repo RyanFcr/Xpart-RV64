@@ -11,22 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="194500000fs"></ZoomStartTime>
-      <ZoomEndTime time="399000001fs"></ZoomEndTime>
-      <Cursor1Time time="420000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="705235673fs"></ZoomEndTime>
+      <Cursor1Time time="780000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="124"></NameColumnWidth>
+      <NameColumnWidth column_width="112"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/Core_tb/pc_out" type="array">
-      <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_out[31:0]</obj_property>
+      <obj_property name="ElementShortName">pc_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_out[63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/inst" type="array">
-      <obj_property name="ElementShortName">inst[31:0]</obj_property>
-      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+      <obj_property name="ElementShortName">inst[63:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/pc_out" type="array">
       <obj_property name="ElementShortName">pc_out[63:0]</obj_property>
@@ -48,20 +48,45 @@
       <obj_property name="ElementShortName">inst_MEM_WB[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst_MEM_WB[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/alu_in_a" type="array">
-      <obj_property name="ElementShortName">alu_in_a[63:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_in_a[63:0]</obj_property>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea1" type="logic">
+      <obj_property name="ElementShortName">wea1</obj_property>
+      <obj_property name="ObjectShortName">wea1</obj_property>
    </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/alu_in_b" type="array">
-      <obj_property name="ElementShortName">alu_in_b[63:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_in_b[63:0]</obj_property>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea2" type="logic">
+      <obj_property name="ElementShortName">wea2</obj_property>
+      <obj_property name="ObjectShortName">wea2</obj_property>
    </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/res_ID_EX" type="array">
-      <obj_property name="ElementShortName">res_ID_EX[63:0]</obj_property>
-      <obj_property name="ObjectShortName">res_ID_EX[63:0]</obj_property>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea3" type="logic">
+      <obj_property name="ElementShortName">wea3</obj_property>
+      <obj_property name="ObjectShortName">wea3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea4" type="logic">
+      <obj_property name="ElementShortName">wea4</obj_property>
+      <obj_property name="ObjectShortName">wea4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea5" type="logic">
+      <obj_property name="ElementShortName">wea5</obj_property>
+      <obj_property name="ObjectShortName">wea5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea6" type="logic">
+      <obj_property name="ElementShortName">wea6</obj_property>
+      <obj_property name="ObjectShortName">wea6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea7" type="logic">
+      <obj_property name="ElementShortName">wea7</obj_property>
+      <obj_property name="ObjectShortName">wea7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/wea8" type="logic">
+      <obj_property name="ElementShortName">wea8</obj_property>
+      <obj_property name="ObjectShortName">wea8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Core_tb/uut/my_ram_unit/memoryAccessByte" type="array">
+      <obj_property name="ElementShortName">memoryAccessByte[1:0]</obj_property>
+      <obj_property name="ObjectShortName">memoryAccessByte[1:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/reg32/register" type="array">
       <obj_property name="ElementShortName">register[1:31][63:0]</obj_property>
       <obj_property name="ObjectShortName">register[1:31][63:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

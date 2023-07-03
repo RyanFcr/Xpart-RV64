@@ -28,18 +28,18 @@ module Core_tb
     logic        step;
     logic        debug_mode;
     //logic [4:0]  debug_reg_addr; // register address
-    logic [31:0] data_in;
-    logic [31:0] chip_debug_in;
+    logic [63:0] data_in;
+    logic [63:0] chip_debug_in;
     // output
-    logic [31:0] address;
-    logic [31:0] data_out;
-    logic [31:0] chip_debug_out0;
-    logic [31:0] chip_debug_out1;
-    logic [31:0] chip_debug_out2;
-    logic [31:0] chip_debug_out3;
+    logic [63:0] address;
+    logic [63:0] data_out;
+    logic [63:0] chip_debug_out0;
+    logic [63:0] chip_debug_out1;
+    logic [63:0] chip_debug_out2;
+    logic [63:0] chip_debug_out3;
 
     // local
-    logic [31:0]pc_out, addr_out, inst;
+    logic [63:0]pc_out, addr_out, inst;
 
     Core uut(
         .clk(clk),

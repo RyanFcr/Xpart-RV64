@@ -18,7 +18,7 @@ module Core(
     output wire [63:0]     chip_debug_out3 
 );
     wire rst, mem_write, mem_clk, cpu_clk;
-    wire [31:0] inst;
+    wire [63:0] inst;
     wire [63:0] pc_out,core_data_in, addr_out, core_data_out,debug_reg_addr_out;
     reg  [63:0] clk_div;
     wire [1:0] memoryAccessByte; 
