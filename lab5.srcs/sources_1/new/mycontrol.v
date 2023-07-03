@@ -45,9 +45,10 @@ module mycontrol(
             else mem_read = 0; 
             
             if (op_code == 7'b0100011) begin
+                memoryAccessByte = 2'b10; // 8 byte by default
                 if (funct3 == 3'b000) memoryAccessByte = 2'b00; // 1 byte 
                 else if (funct3 == 3'b010) memoryAccessByte = 2'b01; // 4 byte 
-                else if (funct3 == 3'b011) memoryAccessByte = 2'b11; // 8 byte 
+                else if (funct3 == 3'b011) memoryAccessByte = 2'b10; // 8 byte 
             end
              
             
