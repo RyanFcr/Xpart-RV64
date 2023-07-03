@@ -93,7 +93,8 @@ module mycontrol(
                 else if (funct3 == 3'b110) alu_op = OR;
                 else if (funct3 == 3'b111) alu_op = AND;
              end
-             else if (op_code == 7'b0011011 || op_code == 7'b0111011) alu_op = ADDW;  
+             else if ((op_code == 7'b0011011 && funct3 == 3'b000) || op_code == 7'b0111011) alu_op = ADDW;  
+             else if (op_code == 7'b0011011 && funct3 == 3'b001) alu_op = SLLIW; 
              else alu_op = ADD;
              
              if (op_code == 7'b0110011 || op_code == 7'b0010011 || op_code == 7'b0010111 || op_code == 7'b0100011 || op_code == 7'b0011011 || op_code == 7'b0111011) mem_to_reg = 2'b00; 

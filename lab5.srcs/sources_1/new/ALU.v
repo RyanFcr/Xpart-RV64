@@ -27,6 +27,10 @@ module ALU(
             res = a + b; 
             res = {{32{res[31]}}, res[31:0]}; 
         end 
+        else if (alu_op == SLLIW) begin
+            res = a << b; 
+            res = {{32{res[31]}}, res[31:0]}; 
+        end
         else res = 0;
         if (res == 0) zero = 1; else zero = 0;  
         smaller_signed = $signed(a) < $signed(b); 
