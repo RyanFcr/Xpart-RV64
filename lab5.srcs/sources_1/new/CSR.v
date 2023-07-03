@@ -35,8 +35,8 @@ module CSR(
                 else if (write_addr == 12'h141) sepc = write_data; 
                 else if (csr_reg == 12'h142) scause = write_data; 
             end 
-            if (ecall == 1) mcause = 64'd11; 
-            else if (illegal == 1) mcause = 64'd2; 
+            if (ecall == 1) scause = 64'd11; 
+            else if (illegal == 1) scause = 64'd2; 
         end
     end 
 

@@ -3,7 +3,8 @@
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
 // Date        : Wed Jun 14 22:48:07 2023
 // Host        : LAPTOP-1KEUI2OI running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim F:/Xpart-RV64/lab5.srcs/sources_1/ip/Ram/Ram_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Ram_sim_netlist.v
 // Design      : Ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +14,7 @@
 
 (* CHECK_LICENSE_TYPE = "Ram,blk_mem_gen_v8_4_1,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_4_1,Vivado 2018.1" *) 
 (* NotValidForBitStream *)
-module Ram
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clka,
     wea,
     addra,
@@ -125,7 +126,7 @@ module Ram
   (* C_WRITE_WIDTH_B = "8" *) 
   (* C_XDEVICEFAMILY = "artix7" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  Ram_blk_mem_gen_v8_4_1 U0
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_1 U0
        (.addra(addra),
         .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .clka(clka),
@@ -191,8 +192,7 @@ module Ram
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
-module Ram_blk_mem_gen_generic_cstr
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_generic_cstr
    (douta,
     clka,
     addra,
@@ -210,7 +210,7 @@ module Ram_blk_mem_gen_generic_cstr
   wire [7:0]douta;
   wire [0:0]wea;
 
-  Ram_blk_mem_gen_prim_width \ramloop[0].ram.r 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_width \ramloop[0].ram.r 
        (.addra(addra),
         .clka(clka),
         .dina(dina),
@@ -218,8 +218,7 @@ module Ram_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module Ram_blk_mem_gen_prim_width
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_width
    (douta,
     clka,
     addra,
@@ -237,7 +236,7 @@ module Ram_blk_mem_gen_prim_width
   wire [7:0]douta;
   wire [0:0]wea;
 
-  Ram_blk_mem_gen_prim_wrapper \prim_noinit.ram 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_wrapper \prim_noinit.ram 
        (.addra(addra),
         .clka(clka),
         .dina(dina),
@@ -245,8 +244,7 @@ module Ram_blk_mem_gen_prim_width
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Ram_blk_mem_gen_prim_wrapper
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_wrapper
    (douta,
     clka,
     addra,
@@ -395,8 +393,7 @@ module Ram_blk_mem_gen_prim_wrapper
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
-module Ram_blk_mem_gen_top
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_top
    (douta,
     clka,
     addra,
@@ -414,7 +411,7 @@ module Ram_blk_mem_gen_top
   wire [7:0]douta;
   wire [0:0]wea;
 
-  Ram_blk_mem_gen_generic_cstr \valid.cstr 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_generic_cstr \valid.cstr 
        (.addra(addra),
         .clka(clka),
         .dina(dina),
@@ -446,8 +443,8 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "2048" *) (* C_WRITE_DEPTH_B = "2048" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
-module Ram_blk_mem_gen_v8_4_1
+(* C_XDEVICEFAMILY = "artix7" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_1
    (clka,
     rsta,
     ena,
@@ -646,7 +643,7 @@ module Ram_blk_mem_gen_v8_4_1
   assign sbiterr = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  Ram_blk_mem_gen_v8_4_1_synth inst_blk_mem_gen
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_1_synth inst_blk_mem_gen
        (.addra(addra),
         .clka(clka),
         .dina(dina),
@@ -654,8 +651,7 @@ module Ram_blk_mem_gen_v8_4_1
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
-module Ram_blk_mem_gen_v8_4_1_synth
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_1_synth
    (douta,
     clka,
     addra,
@@ -673,7 +669,7 @@ module Ram_blk_mem_gen_v8_4_1_synth
   wire [7:0]douta;
   wire [0:0]wea;
 
-  Ram_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
        (.addra(addra),
         .clka(clka),
         .dina(dina),

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 14 22:46:24 2023
+# Process ID: 20732
+# Current directory: F:/Xpart-RV64/lab5.runs/Ram_synth_1
+# Command line: vivado.exe -log Ram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Ram.tcl
+# Log file: F:/Xpart-RV64/lab5.runs/Ram_synth_1/Ram.vds
+# Journal file: F:/Xpart-RV64/lab5.runs/Ram_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Ram.tcl -notrace

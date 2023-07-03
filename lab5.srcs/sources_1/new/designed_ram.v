@@ -10,7 +10,7 @@ module designed_ram(
 );
     
     reg wea1, wea2, wea3, wea4, wea5, wea6, wea7, wea8; 
-    reg [7:0] douta1,douta2, douta3, douta4, douta5, douta6, douta7, douta8;  
+    wire [7:0] douta1,douta2, douta3, douta4, douta5, douta6, douta7, douta8;  
     
     always @(*) begin
         if (wea == 1'b1) begin
