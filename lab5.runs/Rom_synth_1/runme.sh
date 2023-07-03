@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/Vivado labs/sys3_lab1_myversion/lab5.runs/Rom_synth_1'
+HD_PWD='F:/Vivado labs/Xpart-RV64/lab5.runs/Rom_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

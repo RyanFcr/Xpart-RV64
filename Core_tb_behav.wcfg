@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="95358000000fs"></ZoomStartTime>
-      <ZoomEndTime time="95397700001fs"></ZoomEndTime>
-      <Cursor1Time time="99561672000fs"></Cursor1Time>
+      <ZoomStartTime time="194500000fs"></ZoomStartTime>
+      <ZoomEndTime time="399000001fs"></ZoomEndTime>
+      <Cursor1Time time="420000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="136"></NameColumnWidth>
+      <NameColumnWidth column_width="124"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
+   <WVObjectSize size="11" />
    <wvobject fp_name="/Core_tb/pc_out" type="array">
       <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">pc_out[31:0]</obj_property>
@@ -48,49 +48,20 @@
       <obj_property name="ElementShortName">inst_MEM_WB[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst_MEM_WB[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/pc_unit/pc_change" type="logic">
-      <obj_property name="ElementShortName">pc_change</obj_property>
-      <obj_property name="ObjectShortName">pc_change</obj_property>
+   <wvobject fp_name="/Core_tb/uut/cpu/alu_in_a" type="array">
+      <obj_property name="ElementShortName">alu_in_a[63:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_in_a[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/IF_ID_reg/flush" type="logic">
-      <obj_property name="ElementShortName">flush</obj_property>
-      <obj_property name="ObjectShortName">flush</obj_property>
+   <wvobject fp_name="/Core_tb/uut/cpu/alu_in_b" type="array">
+      <obj_property name="ElementShortName">alu_in_b[63:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_in_b[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/branch_prediction_unit/stored_address" type="array">
-      <obj_property name="ElementShortName">stored_address[11:0]</obj_property>
-      <obj_property name="ObjectShortName">stored_address[11:0]</obj_property>
+   <wvobject fp_name="/Core_tb/uut/cpu/res_ID_EX" type="array">
+      <obj_property name="ElementShortName">res_ID_EX[63:0]</obj_property>
+      <obj_property name="ObjectShortName">res_ID_EX[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/branch_prediction_unit/branch_address" type="array">
-      <obj_property name="ElementShortName">branch_address[11:0]</obj_property>
-      <obj_property name="ObjectShortName">branch_address[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/stored_address_ID_EX" type="array">
-      <obj_property name="ElementShortName">stored_address_ID_EX[11:0]</obj_property>
-      <obj_property name="ObjectShortName">stored_address_ID_EX[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/stored_pc_IF_ID" type="array">
-      <obj_property name="ElementShortName">stored_pc_IF_ID[63:0]</obj_property>
-      <obj_property name="ObjectShortName">stored_pc_IF_ID[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/branch_prediction_unit/is_taken" type="logic">
-      <obj_property name="ElementShortName">is_taken</obj_property>
-      <obj_property name="ObjectShortName">is_taken</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/is_taken_ID_EX" type="logic">
-      <obj_property name="ElementShortName">is_taken_ID_EX</obj_property>
-      <obj_property name="ObjectShortName">is_taken_ID_EX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/branch_IF" type="logic">
-      <obj_property name="ElementShortName">branch_IF</obj_property>
-      <obj_property name="ObjectShortName">branch_IF</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/branch_prediction_unit/real_taken" type="logic">
-      <obj_property name="ElementShortName">real_taken</obj_property>
-      <obj_property name="ObjectShortName">real_taken</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/cpu/branch_prediction_unit/BHT" type="array">
-      <obj_property name="ElementShortName">BHT[0:4095][1:0]</obj_property>
-      <obj_property name="ObjectShortName">BHT[0:4095][1:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject fp_name="/Core_tb/uut/cpu/reg32/register" type="array">
+      <obj_property name="ElementShortName">register[1:31][63:0]</obj_property>
+      <obj_property name="ObjectShortName">register[1:31][63:0]</obj_property>
    </wvobject>
 </wave_config>
