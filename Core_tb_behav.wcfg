@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="900000000fs"></ZoomStartTime>
-      <ZoomEndTime time="1270030125fs"></ZoomEndTime>
-      <Cursor1Time time="1340357000fs"></Cursor1Time>
+      <ZoomStartTime time="1500000fs"></ZoomStartTime>
+      <ZoomEndTime time="9544134fs"></ZoomEndTime>
+      <Cursor1Time time="773577000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="108"></NameColumnWidth>
-      <ValueColumnWidth column_width="141"></ValueColumnWidth>
+      <ValueColumnWidth column_width="137"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="8" />
    <wvobject fp_name="/Core_tb/pc_out" type="array">
       <obj_property name="ElementShortName">pc_out[63:0]</obj_property>
       <obj_property name="ObjectShortName">pc_out[63:0]</obj_property>
@@ -47,50 +47,6 @@
    <wvobject fp_name="/Core_tb/uut/cpu/MEM_WB_reg/inst_MEM_WB" type="array">
       <obj_property name="ElementShortName">inst_MEM_WB[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst_MEM_WB[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/addra" type="array">
-      <obj_property name="ElementShortName">addra[63:0]</obj_property>
-      <obj_property name="ObjectShortName">addra[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta" type="array">
-      <obj_property name="ElementShortName">douta[63:0]</obj_property>
-      <obj_property name="ObjectShortName">douta[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/memoryAccessByte" type="array">
-      <obj_property name="ElementShortName">memoryAccessByte[1:0]</obj_property>
-      <obj_property name="ObjectShortName">memoryAccessByte[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta1" type="array">
-      <obj_property name="ElementShortName">douta1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta1[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta2" type="array">
-      <obj_property name="ElementShortName">douta2[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta2[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta3" type="array">
-      <obj_property name="ElementShortName">douta3[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta3[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta4" type="array">
-      <obj_property name="ElementShortName">douta4[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta4[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta5" type="array">
-      <obj_property name="ElementShortName">douta5[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta5[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta6" type="array">
-      <obj_property name="ElementShortName">douta6[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta6[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta7" type="array">
-      <obj_property name="ElementShortName">douta7[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta7[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Core_tb/uut/my_ram_unit/douta8" type="array">
-      <obj_property name="ElementShortName">douta8[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta8[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Core_tb/uut/cpu/reg32/register" type="array">
       <obj_property name="ElementShortName">register[1:31][63:0]</obj_property>

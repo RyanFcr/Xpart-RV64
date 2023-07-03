@@ -160,7 +160,7 @@ module SCPU(
     wire [63:0] data1, data2, pc_ID_EX, imm_ID_EX, res_ID_EX, forwarding_res_EX_MEM, csr_out_ID_EX,stored_pc_ID_EX;
     wire[31:0]  inst_ID_EX;
     wire [1:0] pc_src_ID_EX, mem_to_reg_ID_EX, forwarding_a, forwarding_b, memoryAccessByte_ID_EX; 
-    wire reg_write_ID_EX, alu_src_b_ID_EX, mem_write_ID_EX, branch_ID_EX, zero_ID_EX, smaller_ID_EX, bigger_ID_EX, mem_read_ID_EX, csr_write_ID_EX, ecall_ID_EX, mret_ID_EX, illegal_ID_EX, is_taken_ID_EX; 
+    wire reg_write_ID_EX, alu_src_b_ID_EX, mem_write_ID_EX, branch_ID_EX, zero_ID_EX, smaller_signed_ID_EX, bigger_signed_ID_EX, smaller_unsigned_ID_EX, bigger_unsigned_ID_EX, mem_read_ID_EX, csr_write_ID_EX, ecall_ID_EX, mret_ID_EX, illegal_ID_EX, is_taken_ID_EX; 
     wire [3:0] alu_op_ID_EX; 
     wire [4:0] forwarding_rd_EX_MEM, forwarding_rd_MEM_WB; 
     wire [2:0] b_type_ID_EX; 
@@ -282,10 +282,12 @@ module SCPU(
         .alu_op(alu_op_ID_EX), 
         .res(res_ID_EX), 
         .zero(zero_ID_EX), 
-        .smaller(smaller_ID_EX), 
-        .bigger(bigger_ID_EX) 
+        .smaller_signed(smaller_signed_ID_EX), 
+        .bigger_signed(bigger_signed_ID_EX), 
+        .smaller_unsigned(smaller_unsigned_ID_EX), 
+        .bigger_unsigned(bigger_unsigned_ID_EX)
     );
-    
+     
     always @(*) begin 
         real_res = res_ID_EX; 
         if (inst_ID_EX[6:0] == 7'b0010111) real_res = imm_ID_EX + pc_ID_EX;
@@ -308,25 +310,25 @@ module SCPU(
                     real_taken = 1;
                     branch_pc = adderoutput_ID_EX; 
                 end 
-                else if (b_type_ID_EX == 3'b100 && smaller_ID_EX == 1) begin
+                else if (b_type_ID_EX == 3'b100 && smaller_signed_ID_EX == 1) begin
                     adderoutput_ID_EX = pc_ID_EX + imm_ID_EX;
                     if (is_taken_ID_EX == 0) pc_change_ID_EX = 1;
                     real_taken = 1;
                     branch_pc = adderoutput_ID_EX; 
                 end
-                else if (b_type_ID_EX == 3'b101 && (bigger_ID_EX == 1 || zero_ID_EX == 1)) begin
+                else if (b_type_ID_EX == 3'b101 && (bigger_signed_ID_EX == 1 || zero_ID_EX == 1)) begin
                     adderoutput_ID_EX = pc_ID_EX + imm_ID_EX;
                     if (is_taken_ID_EX == 0) pc_change_ID_EX = 1;
                     real_taken = 1;
                     branch_pc = adderoutput_ID_EX; 
                 end
-                else if (b_type_ID_EX == 3'b110 && smaller_ID_EX == 1) begin
+                else if (b_type_ID_EX == 3'b110 && smaller_unsigned_ID_EX == 1) begin
                     adderoutput_ID_EX = pc_ID_EX + imm_ID_EX;
                     if (is_taken_ID_EX == 0) pc_change_ID_EX = 1;
                     real_taken = 1;
                     branch_pc = adderoutput_ID_EX; 
                 end
-                else if (b_type_ID_EX == 3'b111 && (bigger_ID_EX == 1 || zero_ID_EX == 1)) begin
+                else if (b_type_ID_EX == 3'b111 && (bigger_unsigned_ID_EX == 1 || zero_ID_EX == 1)) begin
                     adderoutput_ID_EX = pc_ID_EX + imm_ID_EX;
                     if (is_taken_ID_EX == 0) pc_change_ID_EX = 1;
                     real_taken = 1; 

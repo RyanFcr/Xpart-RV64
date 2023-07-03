@@ -6,8 +6,10 @@ module ALU(
     input [3:0] alu_op,
     output reg [63:0] res,
     output reg zero, 
-    output reg smaller, 
-    output reg bigger 
+    output reg smaller_signed, 
+    output reg bigger_signed, 
+    output reg smaller_unsigned, 
+    output reg bigger_unsigned 
 );
     `include "AluOp.vh"
     always @(*) begin 
@@ -27,7 +29,9 @@ module ALU(
         end 
         else res = 0;
         if (res == 0) zero = 1; else zero = 0;  
-        if (res[63] == 1) smaller = 1; else smaller = 0; 
-        if (res[63] == 0 && zero == 0) bigger = 1; else bigger = 0; 
+        smaller_signed = $signed(a) < $signed(b); 
+        bigger_signed = $signed(a) > $signed(b); 
+        smaller_unsigned = $unsigned(a) < $unsigned(b); 
+        bigger_unsigned = $unsigned(a) > $unsigned(b); 
     end 
 endmodule
