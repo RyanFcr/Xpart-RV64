@@ -9,6 +9,7 @@ module pc(
     input is_taken, 
     input [63:0] target_address, 
     input [63:0] adderoutput, 
+    input mmu_stall, 
     output reg[63:0] curpc 
     );
     
@@ -16,7 +17,7 @@ module pc(
         if (rst) curpc = 0; 
         else begin 
             if (pc_change == 1) curpc = adderoutput;
-            else if (stall || csr_stall) curpc = curpc; 
+            else if (stall || csr_stall || mmu_stall) curpc = curpc; 
             else if (is_taken) curpc = target_address; 
             else curpc = curpc + 4; 
         end 

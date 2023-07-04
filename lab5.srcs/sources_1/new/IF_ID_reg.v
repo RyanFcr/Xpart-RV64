@@ -10,6 +10,7 @@ module IF_ID_reg(
     input [11:0] stored_address_IF, 
     input [63:0] stored_pc_IF, 
     input is_taken_IF, 
+    input mmu_stall, 
     output reg[31:0] inst_IF_ID, 
     output reg[63:0] pc_IF_ID, 
     output reg[11:0] stored_address_IF_ID, 
@@ -26,6 +27,13 @@ module IF_ID_reg(
             is_taken_IF_ID = is_taken_IF_ID; 
         end
         else if (flush || csr_stall) inst_IF_ID = 32'h00000013; 
+        else if (mmu_stall) begin
+            inst_IF_ID = inst_IF_ID; 
+            pc_IF_ID = pc_IF_ID;
+            stored_address_IF_ID = stored_address_IF_ID;
+            stored_pc_IF_ID = stored_pc_IF_ID;
+            is_taken_IF_ID = is_taken_IF_ID;
+        end
         else begin 
             inst_IF_ID = inst; 
             pc_IF_ID = pc;

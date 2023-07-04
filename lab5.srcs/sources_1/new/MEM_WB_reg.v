@@ -14,6 +14,7 @@ module MEM_WB_reg(
     input csr_write_EX_MEM, 
     input ecall_EX_MEM, 
     input illegal_EX_MEM, 
+    input mmu_stall, 
     output reg [63:0] res_MEM_WB, 
     output reg [63:0] data_in_MEM_WB, 
     output reg [1:0] mem_to_reg_MEM_WB, 
@@ -29,18 +30,34 @@ module MEM_WB_reg(
 );
     
     always @(posedge clk) begin 
-        res_MEM_WB = res_EX_MEM; 
-        data_in_MEM_WB = data_in; 
-        mem_to_reg_MEM_WB = mem_to_reg_EX_MEM;
-        pc_src_MEM_WB = pc_src_EX_MEM;
-        inst_MEM_WB = inst_EX_MEM;
-        reg_write_MEM_WB = reg_write_EX_MEM; 
-        imm_MEM_WB = imm_EX_MEM; 
-        pc_MEM_WB = pc_EX_MEM; 
-        csr_out_MEM_WB = csr_out_EX_MEM; 
-        csr_write_MEM_WB = csr_write_EX_MEM; 
-        ecall_MEM_WB = ecall_EX_MEM; 
-        illegal_MEM_WB = illegal_EX_MEM; 
+        if (mmu_stall) begin
+            res_MEM_WB = res_MEM_WB; 
+            data_in_MEM_WB = data_in_MEM_WB; 
+            mem_to_reg_MEM_WB = mem_to_reg_MEM_WB;
+            pc_src_MEM_WB = pc_src_MEM_WB;
+            inst_MEM_WB = inst_MEM_WB;
+            reg_write_MEM_WB = reg_write_MEM_WB; 
+            imm_MEM_WB = imm_MEM_WB; 
+            pc_MEM_WB = pc_MEM_WB; 
+            csr_out_MEM_WB = csr_out_MEM_WB; 
+            csr_write_MEM_WB = csr_write_MEM_WB; 
+            ecall_MEM_WB = ecall_MEM_WB; 
+            illegal_MEM_WB = illegal_MEM_WB; 
+        end
+        else begin
+            res_MEM_WB = res_EX_MEM; 
+            data_in_MEM_WB = data_in; 
+            mem_to_reg_MEM_WB = mem_to_reg_EX_MEM;
+            pc_src_MEM_WB = pc_src_EX_MEM;
+            inst_MEM_WB = inst_EX_MEM;
+            reg_write_MEM_WB = reg_write_EX_MEM; 
+            imm_MEM_WB = imm_EX_MEM; 
+            pc_MEM_WB = pc_EX_MEM; 
+            csr_out_MEM_WB = csr_out_EX_MEM; 
+            csr_write_MEM_WB = csr_write_EX_MEM; 
+            ecall_MEM_WB = ecall_EX_MEM; 
+            illegal_MEM_WB = illegal_EX_MEM; 
+        end 
     end 
     
 endmodule

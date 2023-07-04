@@ -17,7 +17,9 @@ module EX_MEM_reg(
     input csr_write_ID_EX, 
     input ecall_ID_EX, 
     input illegal_ID_EX,
-    input [1:0] memoryAccessByte_ID_EX, 
+    input [1:0] memoryAccessByte_ID_EX,
+    input memory_access_ID_EX,  
+    input mmu_stall, 
     output reg [63:0] res_EX_MEM, 
     output reg [63:0] pc_EX_MEM, 
     output reg [63:0] adderoutput_EX_MEM, 
@@ -33,26 +35,49 @@ module EX_MEM_reg(
     output reg csr_write_EX_MEM, 
     output reg ecall_EX_MEM, 
     output reg illegal_EX_MEM, 
-    output reg [1:0] memoryAccessByte_EX_MEM 
+    output reg [1:0] memoryAccessByte_EX_MEM,  
+    output reg memory_access_EX_MEM
 );
 
     always @(posedge clk) begin 
-        res_EX_MEM = res_ID_EX; 
-        pc_EX_MEM = pc_ID_EX; 
-        adderoutput_EX_MEM = adderoutput_ID_EX; 
-        inst_EX_MEM = inst_ID_EX; 
-        pc_src_EX_MEM = pc_src_ID_EX; 
-        reg_write_EX_MEM = reg_write_ID_EX; 
-        mem_to_reg_EX_MEM = mem_to_reg_ID_EX; 
-        mem_write_EX_MEM = mem_write_ID_EX;
-        data_EX_MEM = data2; 
-        pc_change_EX_MEM = pc_change_ID_EX; 
-        imm_EX_MEM = imm_ID_EX; 
-        csr_out_EX_MEM = csr_out_ID_EX; 
-        csr_write_EX_MEM = csr_write_ID_EX; 
-        ecall_EX_MEM = ecall_ID_EX;
-        illegal_EX_MEM = illegal_ID_EX; 
-        memoryAccessByte_EX_MEM = memoryAccessByte_ID_EX; 
+        if (mmu_stall) begin
+            res_EX_MEM = res_EX_MEM; 
+            pc_EX_MEM = pc_EX_MEM; 
+            adderoutput_EX_MEM = adderoutput_EX_MEM; 
+            inst_EX_MEM = inst_EX_MEM; 
+            pc_src_EX_MEM = pc_src_EX_MEM; 
+            reg_write_EX_MEM = reg_write_EX_MEM; 
+            mem_to_reg_EX_MEM = mem_to_reg_EX_MEM; 
+            mem_write_EX_MEM = mem_write_EX_MEM;
+            data_EX_MEM = data_EX_MEM; 
+            pc_change_EX_MEM = pc_change_EX_MEM; 
+            imm_EX_MEM = imm_EX_MEM; 
+            csr_out_EX_MEM = csr_out_EX_MEM; 
+            csr_write_EX_MEM = csr_write_EX_MEM; 
+            ecall_EX_MEM = ecall_EX_MEM;
+            illegal_EX_MEM = illegal_EX_MEM; 
+            memoryAccessByte_EX_MEM = memoryAccessByte_EX_MEM; 
+            memory_access_EX_MEM = memory_access_EX_MEM; 
+        end
+        else begin
+            res_EX_MEM = res_ID_EX; 
+            pc_EX_MEM = pc_ID_EX; 
+            adderoutput_EX_MEM = adderoutput_ID_EX; 
+            inst_EX_MEM = inst_ID_EX; 
+            pc_src_EX_MEM = pc_src_ID_EX; 
+            reg_write_EX_MEM = reg_write_ID_EX; 
+            mem_to_reg_EX_MEM = mem_to_reg_ID_EX; 
+            mem_write_EX_MEM = mem_write_ID_EX;
+            data_EX_MEM = data2; 
+            pc_change_EX_MEM = pc_change_ID_EX; 
+            imm_EX_MEM = imm_ID_EX; 
+            csr_out_EX_MEM = csr_out_ID_EX; 
+            csr_write_EX_MEM = csr_write_ID_EX; 
+            ecall_EX_MEM = ecall_ID_EX;
+            illegal_EX_MEM = illegal_ID_EX; 
+            memoryAccessByte_EX_MEM = memoryAccessByte_ID_EX; 
+            memory_access_EX_MEM = memory_access_ID_EX; 
+        end 
     end 
     
 endmodule

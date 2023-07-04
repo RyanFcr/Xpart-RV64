@@ -20,7 +20,8 @@ module mycontrol(
     output reg mem_read, 
     output reg csr_write, 
     output reg illegal, 
-    output reg [1:0] memoryAccessByte 
+    output reg [1:0] memoryAccessByte, 
+    output reg memory_access 
 );
     `include "AluOp.vh"
 
@@ -32,6 +33,7 @@ module mycontrol(
             mem_to_reg = 0; 
             mem_write = 0; 
             branch = 0; 
+            memory_access = 0; 
         end 
         else begin
         
@@ -109,6 +111,7 @@ module mycontrol(
              if (op_code == 7'b1100011) branch = 1; else branch = 0;
                      
              b_type = funct3; 
+             memory_access = mem_read | mem_write; 
              
              if (op_code == 7'b1110011 && (funct3 == 3'b001 || funct3 == 3'b010 || funct3 == 3'b011 || funct3 == 3'b101 || funct3 == 3'b110 || funct3 == 3'b111)) csr_write = 1; 
              else csr_write = 0; 

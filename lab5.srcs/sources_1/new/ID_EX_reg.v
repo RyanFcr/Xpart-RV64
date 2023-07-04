@@ -27,6 +27,8 @@ module ID_EX_reg(
     input is_taken_IF_ID, 
     input [63:0] stored_pc_IF_ID, 
     input [1:0] memoryAccessByte_IF_ID, 
+    input memory_access_IF_ID, 
+    input mmu_stall, 
     output reg [63:0] data1, 
     output reg [63:0] data2, 
     output reg [31:0] inst_ID_EX, 
@@ -49,7 +51,8 @@ module ID_EX_reg(
     output reg [11:0] stored_address_ID_EX, 
     output reg is_taken_ID_EX, 
     output reg [63:0] stored_pc_ID_EX, 
-    output reg [1:0] memoryAccessByte_ID_EX 
+    output reg [1:0] memoryAccessByte_ID_EX, 
+    output reg memory_access_ID_EX 
 );
 
     always @(posedge clk) begin 
@@ -66,7 +69,34 @@ module ID_EX_reg(
             sret_ID_EX = 0; 
             illegal_ID_EX = 0; 
             is_taken_ID_EX = 0; 
+            memory_access_ID_EX = 0; 
         end 
+        else if (mmu_stall) begin
+            data1 = data1; 
+            data2 = data2;
+            inst_ID_EX = inst_ID_EX; 
+            pc_ID_EX = pc_ID_EX; 
+            pc_src_ID_EX = pc_src_ID_EX; 
+            reg_write_ID_EX = reg_write_ID_EX; 
+            alu_src_b_ID_EX = alu_src_b_ID_EX; 
+            mem_to_reg_ID_EX = mem_to_reg_ID_EX; 
+            mem_write_ID_EX = mem_write_ID_EX;
+            branch_ID_EX = branch_ID_EX; 
+            b_type_ID_EX = b_type_ID_EX; 
+            imm_ID_EX = imm_ID_EX;
+            alu_op_ID_EX = alu_op_ID_EX; 
+            mem_read_ID_EX = mem_read_ID_EX; 
+            csr_write_ID_EX = csr_write_ID_EX; 
+            csr_out_ID_EX = csr_out_ID_EX; 
+            ecall_ID_EX = ecall_ID_EX; 
+            sret_ID_EX = sret_ID_EX; 
+            illegal_ID_EX = illegal_ID_EX; 
+            stored_address_ID_EX = stored_address_ID_EX; 
+            is_taken_ID_EX = is_taken_ID_EX; 
+            stored_pc_ID_EX = stored_pc_ID_EX; 
+            memoryAccessByte_ID_EX = memoryAccessByte_ID_EX; 
+            memory_access_ID_EX = memory_access_ID_EX; 
+        end
         else begin 
             data1 = rs1; 
             data2 = rs2;
@@ -91,6 +121,7 @@ module ID_EX_reg(
             is_taken_ID_EX = is_taken_IF_ID; 
             stored_pc_ID_EX = stored_pc_IF_ID; 
             memoryAccessByte_ID_EX = memoryAccessByte_IF_ID; 
+            memory_access_ID_EX = memory_access_IF_ID; 
         end 
     end 
     
