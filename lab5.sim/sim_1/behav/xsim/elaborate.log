@@ -3,19 +3,19 @@ Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
 Running: F:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto a8bcf7b3c9fd4db49a7c473bbe949b2f --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port pc_IF_ID [F:/Vivado labs/Xpart-RV64/code/src/SCPU.v:80]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port stored_pc_IF_ID [F:/Vivado labs/Xpart-RV64/code/src/SCPU.v:82]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port stored_pc_IF_ID [F:/Vivado labs/Xpart-RV64/code/src/SCPU.v:197]
-WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [F:/Vivado labs/Xpart-RV64/code/src/SCPU.v:427]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 16 for port a [F:/Vivado labs/Xpart-RV64/code/src/Core.v:50]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:63]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:71]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:79]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:87]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:95]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:103]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:111]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [F:/Vivado labs/Xpart-RV64/lab5.srcs/sources_1/new/designed_ram.v:119]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port pc_IF_ID [C:/Users/23882/Desktop/Xpart-RV64-main/code/src/SCPU.v:80]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port stored_pc_IF_ID [C:/Users/23882/Desktop/Xpart-RV64-main/code/src/SCPU.v:82]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port stored_pc_IF_ID [C:/Users/23882/Desktop/Xpart-RV64-main/code/src/SCPU.v:198]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 64 for port pc_src_EX_MEM [C:/Users/23882/Desktop/Xpart-RV64-main/code/src/SCPU.v:428]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 16 for port a [C:/Users/23882/Desktop/Xpart-RV64-main/code/src/Core.v:50]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:63]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:71]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:79]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:87]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:95]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:103]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:111]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 11 for port addra [C:/Users/23882/Desktop/Xpart-RV64-main/lab5.srcs/sources_1/new/designed_ram.v:119]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

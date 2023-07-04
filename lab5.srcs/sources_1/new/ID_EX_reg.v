@@ -21,7 +21,7 @@ module ID_EX_reg(
     input csr_write_IF_ID, 
     input [63:0] csr_out_IF_ID, 
     input ecall_IF_ID, 
-    input mret_IF_ID, 
+    input sret_IF_ID, 
     input illegal_IF_ID, 
     input [11:0] stored_address_IF_ID, 
     input is_taken_IF_ID, 
@@ -44,7 +44,7 @@ module ID_EX_reg(
     output reg csr_write_ID_EX, 
     output reg [63:0] csr_out_ID_EX, 
     output reg ecall_ID_EX, 
-    output reg mret_ID_EX, 
+    output reg sret_ID_EX, 
     output reg illegal_ID_EX, 
     output reg [11:0] stored_address_ID_EX, 
     output reg is_taken_ID_EX, 
@@ -63,7 +63,7 @@ module ID_EX_reg(
             pc_src_ID_EX = 0; 
             csr_write_ID_EX = 0; 
             ecall_ID_EX = 0;
-            mret_ID_EX = 0; 
+            sret_ID_EX = 0; 
             illegal_ID_EX = 0; 
             is_taken_ID_EX = 0; 
         end 
@@ -85,7 +85,7 @@ module ID_EX_reg(
             csr_write_ID_EX = csr_write_IF_ID; 
             csr_out_ID_EX = csr_out_IF_ID; 
             ecall_ID_EX = ecall_IF_ID; 
-            mret_ID_EX = mret_IF_ID; 
+            sret_ID_EX = sret_IF_ID; 
             illegal_ID_EX = illegal_IF_ID; 
             stored_address_ID_EX = stored_address_IF_ID; 
             is_taken_ID_EX = is_taken_IF_ID; 

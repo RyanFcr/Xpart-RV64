@@ -14,8 +14,8 @@ module SCPU(
     output [1:0] memoryAccessByte 
     );
     
-    // ʵ�� CPU ����
-    wire pc_change, stall, flush, csr_stall, hazard_stall, branch_prediction_we, is_taken_IF; 
+    // ʵ�� CPU ����
+    wire pc_change, stall, flush, csr_stall, hazard_stall, branch_prediction_we, is_taken_IF, sfence_vma_IF_ID; 
     wire [63:0] adderoutput,target_address;
     wire [63:0]  stored_pc_IF; 
     reg [63:0] csr_data_WB;
@@ -58,7 +58,7 @@ module SCPU(
     wire [3:0] alu_op_IF_ID;
     wire [1:0] pc_src_IF_ID, mem_to_reg_IF_ID;
     wire alu_src_IF_ID, branch_IF_ID, alu_src_b_IF_ID, reg_write_IF_ID, mem_write_IF_ID, mem_read_IF_ID, hazard_mem_read_ID_EX, csr_write_IF_ID, ecall_IF_ID, sret_IF_ID, illegal_IF_ID, is_taken_IF_ID;
-    wire [63:0] rs1_out, rs2_out, imm_IF_ID, csr_out_IF_ID;
+    wire [63:0] rs1_out, rs2_out, imm_IF_ID, csr_out_IF_ID, satp;
     wire [31:0] inst_IF_ID, pc_IF_ID, stored_pc_IF_ID;
     reg  [63:0] mem_to_reg_data; 
     wire [4:0] hazard_rd_ID_EX; 
@@ -97,7 +97,7 @@ module SCPU(
         .stall(stall), 
         .flush(flush), 
         .ecall(ecall_IF_ID), 
-        .mret(sret_IF_ID), 
+        .sret(sret_IF_ID), 
         .csr_reg(inst_IF_ID[31:20]), 
         .op_code(inst_IF_ID[6:0]),
         .funct3(inst_IF_ID[14:12]),
@@ -105,10 +105,10 @@ module SCPU(
         .pc_src(pc_src_IF_ID),         // 2'b00 表示pc的数据来自pc+4, 2'b01 表示数据来自JALR跳转地址, 2'b10表示数据来自JAL跳转地址(包括branch). branch 跳转根据条件决定
         .reg_write(reg_write_IF_ID),   // 1'b1 表示写寄存器
         .alu_src_b(alu_src_b_IF_ID),   // 1'b1 表示ALU B口的数据源来自imm, 1'b0表示数据来自Reg[rs2]
-        .alu_op(alu_op_IF_ID),         // 用来控制ALU操作，具体请看AluOp.vh中对各个操作的编�???
+        .alu_op(alu_op_IF_ID),         // 用来控制ALU操作，具体请看AluOp.vh中对各个操作的编�???
         .mem_to_reg(mem_to_reg_IF_ID), // 2'b00 表示写回rd的数据来自ALU, 2'b01表示数据来自imm, 2'b10表示数据来自pc+4, 2'b11 表示数据来自data memory
         .mem_write(mem_write_IF_ID),   // 1'b1 表示写data memory, 1'b0表示读data memory
-        .branch(branch_IF_ID),         // 1'b1 表示是branch类型的指�???
+        .branch(branch_IF_ID),         // 1'b1 表示是branch类型的指�???
         .b_type(b_type_IF_ID),          // 与funct3相同
         .mem_read(mem_read_IF_ID), 
         .csr_write(csr_write_IF_ID), 
@@ -116,7 +116,7 @@ module SCPU(
         .memoryAccessByte(memoryAccessByte_IF_ID) 
     );
     assign ecall_IF_ID = (inst_IF_ID == 32'h00000073); 
-    assign sret_IF_ID = (inst_IF_ID == 32'h30200073);
+    assign sret_IF_ID = (inst_IF_ID == 32'h10200073);
     assign sfence_vma_IF_ID = (inst_IF_ID[31:25] == 7'b0001001&&inst_IF_ID[14:0] == 15'b000000001110011);
     always @(*) begin
         csr_addr_read = inst_IF_ID[31:20]; 
@@ -147,7 +147,8 @@ module SCPU(
         .csr_reg(csr_addr_read), 
         .write_addr(csr_addr_WB), 
         .write_data(csr_data_WB), 
-        .csr_out(csr_out_IF_ID) 
+        .csr_out(csr_out_IF_ID), 
+        .satp_out(satp) 
     );
 
     immgen getimm(
@@ -160,7 +161,7 @@ module SCPU(
     wire [63:0] data1, data2, pc_ID_EX, imm_ID_EX, res_ID_EX, forwarding_res_EX_MEM, csr_out_ID_EX,stored_pc_ID_EX;
     wire[31:0]  inst_ID_EX;
     wire [1:0] pc_src_ID_EX, mem_to_reg_ID_EX, forwarding_a, forwarding_b, memoryAccessByte_ID_EX; 
-    wire reg_write_ID_EX, alu_src_b_ID_EX, mem_write_ID_EX, branch_ID_EX, zero_ID_EX, smaller_signed_ID_EX, bigger_signed_ID_EX, smaller_unsigned_ID_EX, bigger_unsigned_ID_EX, mem_read_ID_EX, csr_write_ID_EX, ecall_ID_EX, mret_ID_EX, illegal_ID_EX, is_taken_ID_EX; 
+    wire reg_write_ID_EX, alu_src_b_ID_EX, mem_write_ID_EX, branch_ID_EX, zero_ID_EX, smaller_signed_ID_EX, bigger_signed_ID_EX, smaller_unsigned_ID_EX, bigger_unsigned_ID_EX, mem_read_ID_EX, csr_write_ID_EX, ecall_ID_EX, sret_ID_EX, illegal_ID_EX, is_taken_ID_EX; 
     wire [3:0] alu_op_ID_EX; 
     wire [4:0] forwarding_rd_EX_MEM, forwarding_rd_MEM_WB; 
     wire [2:0] b_type_ID_EX; 
@@ -213,7 +214,7 @@ module SCPU(
         .csr_write_ID_EX(csr_write_ID_EX), 
         .csr_out_ID_EX(csr_out_ID_EX), 
         .ecall_ID_EX(ecall_ID_EX), 
-        .mret_ID_EX(mret_ID_EX), 
+        .sret_ID_EX(sret_ID_EX), 
         .illegal_ID_EX(illegal_ID_EX), 
         .stored_address_ID_EX(stored_address_ID_EX), 
         .is_taken_ID_EX(is_taken_ID_EX), 
@@ -350,7 +351,7 @@ module SCPU(
                 adderoutput_ID_EX = pc_ID_EX + imm_ID_EX;
                 pc_change_ID_EX = 1;
             end 
-            else if (ecall_ID_EX == 1 || mret_ID_EX == 1 || illegal_ID_EX == 1) begin
+            else if (ecall_ID_EX == 1 || sret_ID_EX == 1 || illegal_ID_EX == 1) begin
                 adderoutput_ID_EX = csr_out_ID_EX; 
                 pc_change_ID_EX = 1; 
             end 

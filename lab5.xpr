@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="36" Path="F:/Vivado labs/Xpart-RV64/lab5.xpr">
+<Project Version="7" Minor="36" Path="C:/Users/23882/Desktop/Xpart-RV64-main/lab5.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a8bcf7b3c9fd4db49a7c473bbe949b2f"/>
@@ -31,20 +31,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="404"/>
+    <Option Name="WTXSimLaunchSim" Val="417"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="82"/>
-    <Option Name="WTModelSimExportSim" Val="82"/>
-    <Option Name="WTQuestaExportSim" Val="82"/>
-    <Option Name="WTIesExportSim" Val="82"/>
-    <Option Name="WTVcsExportSim" Val="82"/>
-    <Option Name="WTRivieraExportSim" Val="82"/>
-    <Option Name="WTActivehdlExportSim" Val="82"/>
+    <Option Name="WTXSimExportSim" Val="87"/>
+    <Option Name="WTModelSimExportSim" Val="87"/>
+    <Option Name="WTQuestaExportSim" Val="87"/>
+    <Option Name="WTIesExportSim" Val="87"/>
+    <Option Name="WTVcsExportSim" Val="87"/>
+    <Option Name="WTRivieraExportSim" Val="87"/>
+    <Option Name="WTActivehdlExportSim" Val="87"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -187,7 +187,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../sys2_lab7/lab7/memory/myRom.v">
+      <File Path="F:/Vivado labs/sys2_lab7/lab7/memory/myRom.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -195,7 +195,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../sys2_lab7/lab7/memory/myRam.v">
+      <File Path="F:/Vivado labs/sys2_lab7/lab7/memory/myRam.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -375,13 +375,14 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Rom_synth_1" Type="Ft3:Synth" SrcSet="Rom" Part="xc7a100tcsg324-3" ConstrsSet="Rom" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="Rom_synth_1" Type="Ft3:Synth" SrcSet="Rom" Part="xc7a100tcsg324-3" ConstrsSet="Rom" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Rom_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>

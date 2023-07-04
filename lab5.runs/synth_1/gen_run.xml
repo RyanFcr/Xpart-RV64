@@ -133,7 +133,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../sys2_lab7/lab7/memory/myRom.v">
+    <File Path="F:/Vivado labs/sys2_lab7/lab7/memory/myRom.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -141,7 +141,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../sys2_lab7/lab7/memory/myRam.v">
+    <File Path="F:/Vivado labs/sys2_lab7/lab7/memory/myRam.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

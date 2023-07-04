@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jul  4 20:50:26 2023
+# Process ID: 2900
+# Current directory: C:/Users/23882/Desktop/Xpart-RV64-main/lab5.runs/Rom_synth_1
+# Command line: vivado.exe -log Rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Rom.tcl
+# Log file: C:/Users/23882/Desktop/Xpart-RV64-main/lab5.runs/Rom_synth_1/Rom.vds
+# Journal file: C:/Users/23882/Desktop/Xpart-RV64-main/lab5.runs/Rom_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Rom.tcl -notrace
+Command: synth_design -top Rom -part xc7a100tcsg324-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19292 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 444.934 ; gain = 99.875
+---------------------------------------------------------------------------------

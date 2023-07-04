@@ -4,7 +4,7 @@ module mycontrol(
     input stall, 
     input flush, 
     input ecall, 
-    input mret, 
+    input sret, 
     input [11:0] csr_reg, 
     input [6:0] op_code, 
     input [2:0] funct3, 
@@ -113,41 +113,42 @@ module mycontrol(
              if (op_code == 7'b1110011 && (funct3 == 3'b001 || funct3 == 3'b010 || funct3 == 3'b011 || funct3 == 3'b101 || funct3 == 3'b110 || funct3 == 3'b111)) csr_write = 1; 
              else csr_write = 0; 
             
-            if (op_code == 7'b0110011) begin
-                if (funct7 == 7'b0000000 || funct7 == 7'b0100000) illegal = 0; 
-                else illegal = 1; 
-            end
-            else if (op_code == 7'b0010011) begin
-                illegal = 0; 
-            end 
-            else if (op_code == 7'b0000011) begin
-                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010  || funct3 == 3'b011 || funct3 == 3'b100 || funct3 == 3'b101) illegal = 0; 
-                else illegal = 1; 
-            end
-            else if (op_code == 7'b0100011) begin 
-                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010 || funct3 == 3'b011) illegal = 0; 
-                else illegal = 1; 
-            end 
-            else if (op_code == 7'b1100011) begin 
-                if (funct3 == 3'b010 || funct3 == 3'b011) illegal = 1; 
-                else illegal = 0; 
-            end
-            else if (op_code == 7'b1101111 || op_code == 7'b0110111 || op_code == 7'b0010111) begin
-                illegal = 0; 
-            end
-            else if (op_code == 7'b1100111) begin
-                if (funct3 == 3'b000) illegal = 0; 
-                else illegal = 1; 
-            end 
-            else if (op_code == 7'b1110011) begin
-                if (ecall || mret) illegal = 0; 
-                else begin
-                    if (csr_reg == 12'h300 || csr_reg == 12'h305 || csr_reg == 12'h341 || csr_reg == 12'h342) illegal = 0; 
-                    else illegal = 1; 
-                end 
-            end 
-            else if (op_code == 7'b0011011 || op_code == 7'b0111011) illegal = 0; 
-            else illegal = 1; 
+//            if (op_code == 7'b0110011) begin
+//                if (funct7 == 7'b0000000 || funct7 == 7'b0100000) illegal = 0; 
+//                else illegal = 1; 
+//            end
+//            else if (op_code == 7'b0010011) begin
+//                illegal = 0; 
+//            end 
+//            else if (op_code == 7'b0000011) begin
+//                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010  || funct3 == 3'b011 || funct3 == 3'b100 || funct3 == 3'b101) illegal = 0; 
+//                else illegal = 1; 
+//            end
+//            else if (op_code == 7'b0100011) begin 
+//                if (funct3 == 3'b000 || funct3 == 3'b001 || funct3 == 3'b010 || funct3 == 3'b011) illegal = 0; 
+//                else illegal = 1; 
+//            end 
+//            else if (op_code == 7'b1100011) begin 
+//                if (funct3 == 3'b010 || funct3 == 3'b011) illegal = 1; 
+//                else illegal = 0; 
+//            end
+//            else if (op_code == 7'b1101111 || op_code == 7'b0110111 || op_code == 7'b0010111) begin
+//                illegal = 0; 
+//            end
+//            else if (op_code == 7'b1100111) begin
+//                if (funct3 == 3'b000) illegal = 0; 
+//                else illegal = 1; 
+//            end 
+//            else if (op_code == 7'b1110011) begin
+//                if (ecall || mret) illegal = 0; 
+//                else begin
+//                    if (csr_reg == 12'h300 || csr_reg == 12'h305 || csr_reg == 12'h341 || csr_reg == 12'h342) illegal = 0; 
+//                    else illegal = 1; 
+//                end 
+//            end 
+//            else if (op_code == 7'b0011011 || op_code == 7'b0111011) illegal = 0; 
+//            else illegal = 1;  
+            illegal = 0; 
         end 
     end
         
