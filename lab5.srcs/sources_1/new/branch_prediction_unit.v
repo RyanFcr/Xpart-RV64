@@ -14,12 +14,12 @@ module branch_prediction(
     output reg is_taken // «∑Ò‘§≤‚taken
 );
     
-    reg [63:0] BTB[0:4095];
-    reg [1:0] BHT[0:4095]; 
+    reg [63:0] BTB[0:16383];
+    reg [1:0] BHT[0:16383]; 
     integer i;
     
     initial begin
-        for (i = 0; i <= 4095; i = i + 1) begin 
+        for (i = 0; i <= 16383; i = i + 1) begin 
             BHT[i] = 2'b00; 
         end
     end

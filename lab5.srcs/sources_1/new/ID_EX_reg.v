@@ -56,22 +56,7 @@ module ID_EX_reg(
 );
 
     always @(posedge clk) begin 
-        if (flush || stall) begin 
-            inst_ID_EX = 32'h00000013; 
-            reg_write_ID_EX = 0;
-            mem_to_reg_ID_EX = 0;
-            mem_write_ID_EX = 0; 
-            mem_read_ID_EX = 0; 
-            branch_ID_EX = 0; 
-            pc_src_ID_EX = 0; 
-            csr_write_ID_EX = 0; 
-            ecall_ID_EX = 0;
-            sret_ID_EX = 0; 
-            illegal_ID_EX = 0; 
-            is_taken_ID_EX = 0; 
-            memory_access_ID_EX = 0; 
-        end 
-        else if (mmu_stall) begin
+        if (mmu_stall) begin
             data1 = data1; 
             data2 = data2;
             inst_ID_EX = inst_ID_EX; 
@@ -97,6 +82,21 @@ module ID_EX_reg(
             memoryAccessByte_ID_EX = memoryAccessByte_ID_EX; 
             memory_access_ID_EX = memory_access_ID_EX; 
         end
+        else if (flush || stall) begin 
+            inst_ID_EX = 32'h00000013; 
+            reg_write_ID_EX = 0;
+            mem_to_reg_ID_EX = 0;
+            mem_write_ID_EX = 0; 
+            mem_read_ID_EX = 0; 
+            branch_ID_EX = 0; 
+            pc_src_ID_EX = 0; 
+            csr_write_ID_EX = 0; 
+            ecall_ID_EX = 0;
+            sret_ID_EX = 0; 
+            illegal_ID_EX = 0; 
+            is_taken_ID_EX = 0; 
+            memory_access_ID_EX = 0; 
+        end 
         else begin 
             data1 = rs1; 
             data2 = rs2;
