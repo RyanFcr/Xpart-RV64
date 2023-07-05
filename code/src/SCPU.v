@@ -15,15 +15,15 @@ module SCPU(
     );
     
     // 实现 CPU 功能
-    wire mmu_stall, memory_access_start, pc_change, stall, flush, csr_stall, hazard_stall, branch_prediction_we, is_taken_IF, sfence_vma_IF_ID; 
+    wire mmu_stall, pc_change, stall, flush, csr_stall, hazard_stall, branch_prediction_we, is_taken_IF, sfence_vma_IF_ID; 
     wire [63:0] output_pa, mem_pa, adderoutput,target_address;
-    wire [1:0] memory_access_cnt; 
+    wire [2:0] memory_access_cnt; 
     wire [63:0]  stored_pc_IF; 
     reg [63:0] csr_data_WB;
     reg [63:0]  branch_pc;
     reg [11:0] csr_addr_WB, csr_addr_read;
     wire [11:0] stored_address_IF, branch_address; 
-    reg for_csr_write, real_taken; 
+    reg for_csr_write, real_taken, memory_access_start; 
     wire for_reg_write, branch_IF; 
     wire [4:0] for_rd_write; 
     
@@ -420,20 +420,23 @@ module SCPU(
     assign forwarding_reg_write_EX_MEM = reg_write_EX_MEM; 
     assign forwarding_rd_EX_MEM = inst_EX_MEM[11:7]; 
     assign forwarding_res_EX_MEM = res_EX_MEM; 
-    assign memory_access_start = memory_access_EX_MEM && satp != 64'b0; 
+    
+    always @(negedge clk) begin
+        memory_access_start = memory_access_EX_MEM && satp != 64'b0; 
+    end
     
     mmu mmu_unit(
         .clk(clk), 
         .memory_access_start(memory_access_start), 
         .va(res_EX_MEM), 
         .satp(satp), 
+        .mem_pa(data_in), 
         .cnt(memory_access_cnt), 
-        .output_pa(output_pa),  
-        .mem_pa(mem_pa), 
+        .output_pa(output_pa), 
         .mmu_stall(mmu_stall) 
     );
     
-    assign addr_out = memory_access_start ? mem_pa : res_EX_MEM; 
+    assign addr_out = memory_access_start ? output_pa : res_EX_MEM; 
 
 //--------------------------------------------- MEM/WB
 
